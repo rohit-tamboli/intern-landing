@@ -40,7 +40,7 @@ export default function Navbar() {
 
             {/* Desktop Button */}
             <button
-              onClick={() => navigate("/signup")}
+              onClick={() => navigate("/phonepe")}
               className="hidden md:inline-block bg-red-500 hover:bg-red-600 
                          transition duration-300 
                          text-white text-sm md:text-lg 
@@ -56,7 +56,7 @@ export default function Navbar() {
       {/* 📱 Mobile Bottom Fixed Button */}
       <div className="fixed rounded-t-2xl bottom-0 left-0 w-full md:hidden bg-white border-t border-gray-200 shadow-lg p-3 z-50">
         <button
-          onClick={() => navigate("/signup")}
+          onClick={() => navigate("/phonepe")}
           className="w-full bg-red-500 hover:bg-red-600 
                      text-white py-3 rounded-xl 
                      font-semibold shadow-md transition duration-300"
