@@ -44,7 +44,7 @@ export default function Hero() {
 
         {/* Title */}
         <motion.h1
-          className="mt-4 text-4xl md:text-5xl font-extrabold leading-tight"
+          className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight"
           initial={{ opacity: 0, y: -40 }}
           whileInView={{ opacity: 1, y: 0 }}
         >
