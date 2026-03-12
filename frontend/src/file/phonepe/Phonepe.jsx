@@ -11,7 +11,7 @@ const Phonepe = () => {
   const data = {
     name: fullName,
     email: email,
-    amount: 1,
+    amount: 2,
     number: phone,
     role: role,
     MUID: "MUID" + Date.now(),
