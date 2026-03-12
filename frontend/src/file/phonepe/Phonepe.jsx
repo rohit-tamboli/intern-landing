@@ -65,7 +65,7 @@ const Phonepe = () => {
                 {!loading2 ? (
                   <div className="col-12 center">
                     <button
-                      className="w-full bg-green-300 hover:bg-green-500 text-white py-3 md:py-4 rounded-2xl text-lg font-semibold transition duration-200 shadow-lg hover:shadow-xl"
+                      className="w-full bg-green-500 hover:bg-green-300 text-white py-3 md:py-4 rounded-2xl text-lg font-semibold transition duration-200 shadow-lg hover:shadow-xl"
                       type="submit"
                     >
                       Pay Now
@@ -75,7 +75,7 @@ const Phonepe = () => {
                 ) : (
                   <div className="col-12 center">
                     <button
-                      className="w-full bg-red-400 text-white py-3 md:py-4 rounded-2xl text-lg font-semibold transition duration-200 shadow-lg hover:shadow-xl"
+                      className="w-full bg-green-400 text-white py-3 md:py-4 rounded-2xl text-lg font-semibold transition duration-200 shadow-lg hover:shadow-xl"
                       type="submit"
                     >
                       <div className="spinner-border" role="status">
