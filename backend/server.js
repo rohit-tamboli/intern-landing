@@ -19,7 +19,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://update-phonepe-server.vercel.app",
+      "https://intern-landing-plum.vercel.app",
     ],
     credentials: true,
   })
