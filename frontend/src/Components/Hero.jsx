@@ -55,11 +55,11 @@ export default function Hero() {
               onClick={() => navigate("/phonepe")}
               className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition md:flex hidden"
             >
-              Apply Now
+              APPLY NOW
             </button>
 
             <button className="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition">
-              View Details
+              VIEW DETAILS
             </button>
           </div>
 

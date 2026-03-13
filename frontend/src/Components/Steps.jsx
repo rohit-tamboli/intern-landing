@@ -1,7 +1,9 @@
 import { FileText, Users, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Steps() {
+    const navigate = useNavigate();
   const steps = [
     {
       icon: <FileText size={28} />,
@@ -62,7 +64,7 @@ export default function Steps() {
         <div className="mt-12">
           <button
             onClick={() => navigate("/phonepe")}
-            className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg"
+            className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg md:flex hidden"
           >
             APPLY NOW
           </button>
