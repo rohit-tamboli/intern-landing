@@ -21,58 +21,51 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pb-15 pt-15 bg-gray-50 overflow-hidden">
-      <div className="max-w-6xl mx-auto px-2 grid md:grid-cols-2 gap-16 items-center">
-        {/* LEFT SIDE */}
+    <section className="bg-gray-50 py-10 md:py-16  overflow-hidden">
+      <div className="max-w-6xl mx-auto px-6 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+
+        {/* LEFT */}
         <div>
-          {/* Badge */}
+
           <span className="inline-block px-4 py-1 text-sm font-semibold bg-white border border-red-200 text-red-600 rounded-full">
             Limited Seats • 2026 Batch
           </span>
 
-          {/* Heading */}
-          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-black leading-tight">
+          <h1 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Start Your Career With a Real Corporate Internship
           </h1>
 
-          {/* Subtitle */}
-          <p className="mt-3 text-lg text-gray-600">
+          <p className="mt-4 text-gray-600 text-lg">
             Join our structured internship program designed for students and
             fresh graduates. Gain corporate exposure, certifications and real
             project experience.
           </p>
 
-          {/* Features */}
-          <div className="mt-4 space-y-2">
+          <div className="mt-6 space-y-3">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 text-gray-700"
-              >
+              <div key={index} className="flex items-center gap-3 text-gray-700">
                 <span className="text-red-500">{feature.icon}</span>
                 <span>{feature.text}</span>
               </div>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="mt-8 flex gap-4 flex-wrap">
+          <div className="mt-8 flex flex-wrap gap-4">
             <button
               onClick={() => navigate("/phonepe")}
-              className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg"
+              className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition md:flex hidden"
             >
-              APPLY NOW
+              Apply Now
             </button>
 
-            <button className="px-5 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition">
-              VIEW DETAILS
+            <button className="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition">
+              View Details
             </button>
           </div>
 
-         
         </div>
 
-        {/* RIGHT SIDE IMAGE */}
+        {/* RIGHT */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,22 +77,20 @@ export default function Hero() {
             className="w-full max-w-lg"
           />
 
-          {/* Floating card 1 */}
-          <div className="absolute top-30 left-0 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
+          <div className="hidden md:block absolute top-24 left-0 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
             🎓 5+ Certifications
           </div>
 
-          {/* Floating card 2 */}
-          <div className="absolute bottom-12 right-20 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
+          <div className="hidden md:block absolute bottom-12 right-10 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
             💰 ₹10,000 Bonus
           </div>
 
-          {/* Floating card 3 */}
-          <div className="absolute top-1/2 -right-8 bg-white shadow-lg rounded-xl px-4 py-3 text-sm flex items-center gap-2">
+          <div className="hidden md:flex absolute top-1/2 -right-6 bg-white shadow-lg rounded-xl px-4 py-3 text-sm items-center gap-2">
             <Users size={16} />
             5000+ Students
           </div>
         </motion.div>
+
       </div>
     </section>
   );

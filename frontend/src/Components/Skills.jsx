@@ -2,6 +2,7 @@ import { Code, Megaphone, Briefcase, UserCheck } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Skills() {
+
   const skills = [
     {
       icon: <Code size={32} />,
@@ -26,11 +27,10 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-20 bg-gray-50">
 
       <div className="max-w-6xl mx-auto px-6 text-center">
 
-        {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           What You Will <span className="text-red-500">Learn</span>
         </h2>
@@ -40,8 +40,7 @@ export default function Skills() {
           skills required to succeed in real corporate environments.
         </p>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-4 gap-8 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
 
           {skills.map((skill, index) => (
             <motion.div
@@ -60,6 +59,7 @@ export default function Skills() {
               <p className="text-gray-600 text-sm mt-3">
                 {skill.desc}
               </p>
+
             </motion.div>
           ))}
 

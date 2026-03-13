@@ -2,7 +2,6 @@ import { FileText, Users, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Steps() {
-
   const steps = [
     {
       icon: <FileText size={28} />,
@@ -23,13 +22,9 @@ export default function Steps() {
 
   return (
     <section className="py-15 bg-gray-50">
-
       <div className="max-w-6xl mx-auto px-6 text-center">
-
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-gray-900">
-          How To Apply
-        </h2>
+        <h2 className="text-4xl font-bold text-gray-900">How To Apply</h2>
 
         <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
           Follow these simple steps to start your corporate internship journey.
@@ -37,58 +32,42 @@ export default function Steps() {
 
         {/* Timeline */}
         <div className="relative mt-20">
-
           {/* Line */}
           <div className="hidden md:block absolute top-25 left-0 right-0 h-1 bg-gray-200"></div>
 
           <div className="grid md:grid-cols-3 gap-12">
-
             {steps.map((step, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.1 }}
                 className="relative bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition"
               >
-
                 {/* Step circle */}
                 <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-red-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
                   {step.icon}
                 </div>
 
                 <div className="mt-8">
-
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {step.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm">
-                    {step.desc}
-                  </p>
-
+                  <p className="text-gray-600 text-sm">{step.desc}</p>
                 </div>
-
-              </motion.div>
+              </div>
             ))}
-
           </div>
-
         </div>
 
         {/* CTA */}
         <div className="mt-12">
           <button
-              onClick={() => navigate("/phonepe")}
-              className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg"
-            >
-              APPLY NOW
-            </button>
+            onClick={() => navigate("/phonepe")}
+            className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg"
+          >
+            APPLY NOW
+          </button>
         </div>
-
       </div>
-
     </section>
   );
 }

@@ -2,11 +2,10 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F9FAFB] text-gray-700 pt-16 pb-6">
+    <footer className="bg-gray-50 text-gray-700 pt-16 pb-6">
 
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
 
-        {/* Brand */}
         <div>
           <h3 className="text-xl font-semibold text-gray-900">
             upDate Internship Program
@@ -18,8 +17,7 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Contact */}
-        <div>
+        <div className="md:pl-30 "> 
           <h4 className="text-lg font-semibold text-gray-900 mb-4">
             Contact
           </h4>
@@ -41,27 +39,26 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Quick Links */}
-        <div>
+        <div className="md:pl-30">
           <h4 className="text-lg font-semibold text-gray-900 mb-4">
             Quick Links
           </h4>
 
           <ul className="space-y-2 text-sm">
 
-            <li className="hover:text-red-500 cursor-pointer transition">
+            <li className="hover:text-red-500 cursor-pointer">
               About Program
             </li>
 
-            <li className="hover:text-red-500 cursor-pointer transition">
+            <li className="hover:text-red-500 cursor-pointer">
               Internship Benefits
             </li>
 
-            <li className="hover:text-red-500 cursor-pointer transition">
+            <li className="hover:text-red-500 cursor-pointer">
               How to Apply
             </li>
 
-            <li className="hover:text-red-500 cursor-pointer transition">
+            <li className="hover:text-red-500 cursor-pointer">
               Apply Now
             </li>
 
@@ -70,7 +67,6 @@ export default function Footer() {
 
       </div>
 
-      {/* Bottom */}
       <div className="border-t border-gray-200 mt-12 pt-6 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} upDate Internship Program. All rights reserved.
       </div>
