@@ -1,118 +1,105 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Briefcase, Home, Award } from "lucide-react";
+import { Briefcase, Home, Award, Users } from "lucide-react";
 
 export default function Hero() {
   const navigate = useNavigate();
 
   const features = [
     {
-      icon: <Briefcase size={28} />,
-      title: "45 Days Corporate Program",
-      desc: "Hands-on real world corporate training and live projects.",
+      icon: <Briefcase size={20} />,
+      text: "45 Days Corporate Internship",
     },
     {
-      icon: <Home size={28} />,
-      title: "Work From Home",
-      desc: "100% remote internship with flexible schedule.",
+      icon: <Home size={20} />,
+      text: "100% Work From Home",
     },
     {
-      icon: <Award size={28} />,
-      title: "₹10,000 Bonus",
-      desc: "Performance-based reward and verified certification.",
+      icon: <Award size={20} />,
+      text: "₹10,000 Performance Bonus",
     },
   ];
 
   return (
-    <section className="relative py-12 bg-gradient-to-br from-red-50 via-white to-orange-50 overflow-hidden">
-
-      {/* background glow */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-red-300 rounded-full blur-[120px] opacity-20"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-300 rounded-full blur-[120px] opacity-20"></div>
-
-      <div className="relative max-w-6xl mx-auto px-6 text-center">
-
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-        >
-          <span className="px-3 py-1 text-[12px] font-semibold bg-red-100 text-red-600 rounded-full shadow-sm">
-            Limited Seats • 2026 Internship Batch
+    <section className="relative pb-15 pt-15 bg-gray-50 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-2 grid md:grid-cols-2 gap-16 items-center">
+        {/* LEFT SIDE */}
+        <div>
+          {/* Badge */}
+          <span className="inline-block px-4 py-1 text-sm font-semibold bg-white border border-red-200 text-red-600 rounded-full">
+            Limited Seats • 2026 Batch
           </span>
-        </motion.div>
 
-        {/* Title */}
-        <motion.h1
-          className="mt-4 text-3xl md:text-5xl font-extrabold leading-tight"
-          initial={{ opacity: 0, y: -40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-        >
-          <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
-            Corporate Internship Program 2026
-          </span>
-        </motion.h1>
+          {/* Heading */}
+          <h1 className="mt-3 text-4xl md:text-5xl font-bold text-black leading-tight">
+            Start Your Career With a Real Corporate Internship
+          </h1>
 
-        {/* Subtitle */}
-        <motion.p
-          className="mt-4 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
-          Get real corporate exposure with{" "}
-          <span className="font-semibold text-red-500">
-            5+ industry certifications
-          </span>{" "}
-          and hands-on internship experience designed for students and fresh
-          graduates.
-        </motion.p>
+          {/* Subtitle */}
+          <p className="mt-3 text-lg text-gray-600">
+            Join our structured internship program designed for students and
+            fresh graduates. Gain corporate exposure, certifications and real
+            project experience.
+          </p>
 
-        {/* Features */}
-        <motion.div
-          className="grid md:grid-cols-3 gap-8 mt-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ y: -8 }}
-              className="bg-white/80 backdrop-blur-xl border border-gray-100 rounded-2xl p-8 shadow-lg"
-            >
-              <div className="flex justify-center text-red-500 mb-4">
-                {feature.icon}
+          {/* Features */}
+          <div className="mt-4 space-y-2">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 text-gray-700"
+              >
+                <span className="text-red-500">{feature.icon}</span>
+                <span>{feature.text}</span>
               </div>
+            ))}
+          </div>
 
-              <h3 className="font-semibold text-lg">{feature.title}</h3>
+          {/* CTA */}
+          <div className="mt-8 flex gap-4 flex-wrap">
+            <button
+              onClick={() => navigate("/phonepe")}
+              className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg"
+            >
+              APPLY NOW
+            </button>
 
-              <p className="text-gray-600 text-sm mt-2">{feature.desc}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        {/* CTA */}
-        <motion.div
-          className="mt-12 flex flex-col md:flex-row justify-center gap-6"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-        >
-          <button
-            onClick={() => navigate("/phonepe")}
-            className="px-10 py-4 text-lg font-semibold text-white rounded-full 
-            bg-gradient-to-r from-red-500 to-orange-500 
-            shadow-lg hover:shadow-2xl hover:scale-105 transition"
-          >
-            Apply Now
-          </button>
+            <button className="px-5 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition">
+              VIEW DETAILS
+            </button>
+          </div>
 
          
+        </div>
+
+        {/* RIGHT SIDE IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative flex justify-center"
+        >
+          <img
+            src="/internship.png"
+            alt="Internship"
+            className="w-full max-w-lg"
+          />
+
+          {/* Floating card 1 */}
+          <div className="absolute top-30 left-0 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
+            🎓 5+ Certifications
+          </div>
+
+          {/* Floating card 2 */}
+          <div className="absolute bottom-12 right-20 bg-white shadow-lg rounded-xl px-4 py-3 text-sm">
+            💰 ₹10,000 Bonus
+          </div>
+
+          {/* Floating card 3 */}
+          <div className="absolute top-1/2 -right-8 bg-white shadow-lg rounded-xl px-4 py-3 text-sm flex items-center gap-2">
+            <Users size={16} />
+            5000+ Students
+          </div>
         </motion.div>
-
-        {/* Trust indicator */}
-        <p className="mt-10 text-sm text-gray-500">
-          Trusted by students from 100+ colleges across India
-        </p>
-
       </div>
     </section>
   );

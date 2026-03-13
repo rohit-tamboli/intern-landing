@@ -47,7 +47,7 @@ export default function Navbar() {
                          px-4 md:px-6 py-2 
                          rounded-lg font-semibold shadow-md"
             >
-              REGISTER NOW
+              APPLY NOW
             </button>
           </nav>
         </div>
@@ -61,7 +61,7 @@ export default function Navbar() {
                      text-white py-3 rounded-xl 
                      font-semibold shadow-md transition duration-300"
         >
-          REGISTER NOW
+          APPLY NOW
         </button>
       </div>
     </>

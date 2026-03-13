@@ -1,71 +1,72 @@
-export default function Skills(){
+import { Code, Megaphone, Briefcase, UserCheck } from "lucide-react";
+import { motion } from "framer-motion";
 
-return(
+export default function Skills() {
+  const skills = [
+    {
+      icon: <Code size={32} />,
+      title: "IT & Technology",
+      desc: "Web Development, AI, Data Analytics",
+    },
+    {
+      icon: <Megaphone size={32} />,
+      title: "Digital Marketing",
+      desc: "SEO, Social Media, Content Creation",
+    },
+    {
+      icon: <Briefcase size={32} />,
+      title: "Management",
+      desc: "HR, Sales, Business Development",
+    },
+    {
+      icon: <UserCheck size={32} />,
+      title: "Career Skills",
+      desc: "Resume Building, Interview Preparation",
+    },
+  ];
 
-<section className="py-24 bg-gray-50">
+  return (
+    <section className="py-24 bg-gray-50">
 
-<div className="max-w-7xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-6 text-center">
 
-<h2 className="text-4xl font-bold mb-16">
-What You Will Learn
-</h2>
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          What You Will <span className="text-red-500">Learn</span>
+        </h2>
 
-<div className="grid md:grid-cols-4 gap-10">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          Gain practical knowledge across multiple domains and build the
+          skills required to succeed in real corporate environments.
+        </p>
 
-<div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        {/* Cards */}
+        <div className="grid md:grid-cols-4 gap-8 mt-16">
 
-<h3 className="text-xl font-semibold mb-3">
-IT & Technology
-</h3>
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ y: -8 }}
+              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+            >
+              <div className="flex justify-center text-red-500 mb-5">
+                {skill.icon}
+              </div>
 
-<p className="text-gray-600">
-Web Development, AI, Data Analytics
-</p>
+              <h3 className="text-lg font-semibold text-gray-900">
+                {skill.title}
+              </h3>
 
-</div>
+              <p className="text-gray-600 text-sm mt-3">
+                {skill.desc}
+              </p>
+            </motion.div>
+          ))}
 
-<div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+        </div>
 
-<h3 className="text-xl font-semibold mb-3">
-Digital Marketing
-</h3>
+      </div>
 
-<p className="text-gray-600">
-SEO, Social Media, Content Creation
-</p>
-
-</div>
-
-<div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-
-<h3 className="text-xl font-semibold mb-3">
-Management
-</h3>
-
-<p className="text-gray-600">
-HR, Sales, Business Development
-</p>
-
-</div>
-
-<div className="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
-
-<h3 className="text-xl font-semibold mb-3">
-Career Skills
-</h3>
-
-<p className="text-gray-600">
-Resume, Interview Preparation
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-)
-
+    </section>
+  );
 }

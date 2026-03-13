@@ -1,47 +1,93 @@
-export default function Benefits(){
+import { CheckCircle } from "lucide-react";
+import { motion } from "framer-motion";
 
-return(
+export default function Benefits() {
 
-<section className="py-24">
+  const benefits = [
+    "Internship Offer Letter",
+    "Internship Completion Certificate",
+    "Letter of Recommendation",
+    "Advanced Domain Certification",
+    "NISM Certification",
+    "Corporate Welcome Kit",
+  ];
 
-<div className="max-w-6xl mx-auto text-center">
+  return (
+    <section className="py-24 bg-white">
 
-<h2 className="text-4xl font-bold mb-14">
-Internship Benefits
-</h2>
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
-<div className="grid md:grid-cols-3 gap-8">
+        {/* LEFT CONTENT */}
+        <motion.div
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
 
-<div className="p-8 border rounded-xl hover:shadow-lg transition">
-✔ Internship Offer Letter
-</div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            Internship Benefits
+          </h2>
 
-<div className="p-8 border rounded-xl hover:shadow-lg transition">
-✔ Internship Completion Certificate
-</div>
+          <p className="mt-4 text-gray-600 max-w-lg">
+            Gain <span className="font-semibold text-gray-900">industry-recognized certifications</span>,
+            corporate exposure and valuable career support designed to help
+            students become <span className="font-semibold text-gray-900">job-ready professionals</span>.
+          </p>
 
-<div className="p-8 border rounded-xl hover:shadow-lg transition">
-✔ Letter of Recommendation
-</div>
+          {/* Benefits List */}
+          <div className="mt-10 grid sm:grid-cols-2 gap-5">
 
-<div className="p-8 border rounded-xl hover:shadow-lg transition">
-✔ Advanced Domain Certification
-</div>
+            {benefits.map((item, index) => (
+              <motion.div
+                key={index}
+                whileHover={{ y: -4 }}
+                className="flex items-center gap-3 bg-gray-50 px-4 py-3 rounded-lg border border-gray-100"
+              >
 
-<div className="p-8 border rounded-xl hover:shadow-lg transition">
-✔ NISM Certification
-</div>
+                <CheckCircle className="text-red-500 flex-shrink-0" size={20} />
 
-<div className="p-8 border rounded-xl hover:shadow-lg transition">
-✔ Corporate Welcome Kit
-</div>
+                <span className="text-gray-700 text-sm font-medium">
+                  {item}
+                </span>
 
-</div>
+              </motion.div>
+            ))}
 
-</div>
+          </div>
 
-</section>
+        </motion.div>
 
-)
+        {/* RIGHT IMAGE */}
+        <motion.div
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center"
+        >
 
+          <div className="relative">
+
+            <img
+              src="/Corporate.png"
+              alt="Internship Certificates and Welcome Kit"
+              className="rounded-2xl w-full max-w-xl "
+            />
+
+            {/* floating badge */}
+            <div className="absolute -top-5 -left-5 bg-white shadow-lg px-4 py-2 rounded-lg text-sm font-semibold">
+              🎓 Certifications
+            </div>
+
+            <div className="absolute -bottom-5 -right-5 bg-white shadow-lg px-4 py-2 rounded-lg text-sm font-semibold">
+              🎁 Welcome Kit
+            </div>
+
+          </div>
+
+        </motion.div>
+
+      </div>
+
+    </section>
+  );
 }

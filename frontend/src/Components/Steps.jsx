@@ -1,53 +1,94 @@
-export default function Steps(){
+import { FileText, Users, Rocket } from "lucide-react";
+import { motion } from "framer-motion";
 
-return(
+export default function Steps() {
 
-<section className="py-24 bg-gray-50">
+  const steps = [
+    {
+      icon: <FileText size={28} />,
+      title: "Submit Application",
+      desc: "Fill the application form and pay the ₹99 registration fee.",
+    },
+    {
+      icon: <Users size={28} />,
+      title: "Interview & Orientation",
+      desc: "Attend a short interview and orientation session.",
+    },
+    {
+      icon: <Rocket size={28} />,
+      title: "Onboarding & Start Internship",
+      desc: "Complete onboarding and begin your internship journey.",
+    },
+  ];
 
-<div className="max-w-6xl mx-auto text-center">
+  return (
+    <section className="py-15 bg-gray-50">
 
-<h2 className="text-4xl font-bold mb-16">
-How To Apply
-</h2>
+      <div className="max-w-6xl mx-auto px-6 text-center">
 
-<div className="grid md:grid-cols-3 gap-10">
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-gray-900">
+          How To Apply
+        </h2>
 
-<div className="bg-white p-10 rounded-2xl shadow">
+        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+          Follow these simple steps to start your corporate internship journey.
+        </p>
 
-<h3 className="text-xl font-semibold mb-3">
-Step 1
-</h3>
+        {/* Timeline */}
+        <div className="relative mt-20">
 
-<p>Submit Application Form & ₹99 Fee</p>
+          {/* Line */}
+          <div className="hidden md:block absolute top-25 left-0 right-0 h-1 bg-gray-200"></div>
 
-</div>
+          <div className="grid md:grid-cols-3 gap-12">
 
-<div className="bg-white p-10 rounded-2xl shadow">
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.1 }}
+                className="relative bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition"
+              >
 
-<h3 className="text-xl font-semibold mb-3">
-Step 2
-</h3>
+                {/* Step circle */}
+                <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-red-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                  {step.icon}
+                </div>
 
-<p>Interview & Orientation</p>
+                <div className="mt-8">
 
-</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
 
-<div className="bg-white p-10 rounded-2xl shadow">
+                  <p className="text-gray-600 text-sm">
+                    {step.desc}
+                  </p>
 
-<h3 className="text-xl font-semibold mb-3">
-Step 3
-</h3>
+                </div>
 
-<p>Internship Starts</p>
+              </motion.div>
+            ))}
 
-</div>
+          </div>
 
-</div>
+        </div>
 
-</div>
+        {/* CTA */}
+        <div className="mt-12">
+          <button
+              onClick={() => navigate("/phonepe")}
+              className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg"
+            >
+              APPLY NOW
+            </button>
+        </div>
 
-</section>
+      </div>
 
-)
-
+    </section>
+  );
 }

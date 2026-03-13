@@ -1,22 +1,21 @@
-export default function About(){
-return(
+import { GraduationCap, Briefcase, Award } from "lucide-react";
 
-<section className="py-20">
+export default function About() {
+  return (
+    <section className="py-24 bg-white">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        {/* Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+          Welcome to <span className="text-red-500">upDate</span>
+        </h2>
 
-<div className="max-w-6xl mx-auto text-center px-6">
-
-<h2 className="text-3xl font-bold mb-6">
-Welcome to upDate
-</h2>
-
-<p className="text-gray-600">
-upDate is an industry-focused EdTech initiative led by IIT Alumni
-committed to transforming learners into corporate-ready professionals.
-</p>
-
-</div>
-
-</section>
-
-)
+        {/* Description */}
+        <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
+          upDate is an industry-focused EdTech initiative led by IIT Alumni
+          committed to transforming learners into corporate-ready professionals
+          through practical learning and real-world experience.
+        </p>
+      </div>
+    </section>
+  );
 }

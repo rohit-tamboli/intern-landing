@@ -1,25 +1,42 @@
-export default function CTA(){
+import { motion } from "framer-motion";
 
-return(
+export default function CTA() {
+  return (
+    <section className="relative py-28 bg-gradient-to-r from-red-500 to-red-600 text-white overflow-hidden">
 
-<section className="bg-red-500 py-24 text-center text-white">
+      {/* background glow */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-white opacity-10 rounded-full blur-3xl"></div>
 
-<h2 className="text-4xl font-bold mb-6">
-Start Your Corporate Journey Today
-</h2>
+      <div className="max-w-4xl mx-auto px-6 text-center relative">
 
-<p className="mb-10 text-lg">
-Apply now and gain real industry experience
-</p>
+        {/* Heading */}
+        <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+          Start Your Corporate Journey Today
+        </h2>
 
-<button className="bg-white text-red-500 px-8 py-4 rounded-xl font-semibold shadow-lg">
+        {/* Subtitle */}
+        <p className="mt-6 text-lg text-red-100">
+          Apply now and gain real industry experience with certifications,
+          mentorship and live projects.
+        </p>
 
-Apply Now
+        {/* CTA Button */}
+        <motion.button
+          whileHover={{ scale: 1.07 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-10 bg-white text-red-600 px-10 py-4 rounded-xl font-semibold shadow-xl hover:shadow-2xl transition"
+        >
+          Apply Now
+        </motion.button>
 
-</button>
+        {/* Trust text */}
+        <p className="mt-6 text-sm text-red-100">
+          Trusted by students from 100+ colleges across India
+        </p>
 
-</section>
+      </div>
 
-)
-
+    </section>
+  );
 }
