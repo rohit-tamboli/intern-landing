@@ -22,7 +22,7 @@ export default function CTA() {
         </p>
 
         {/* CTA Button */}
-        <button className="mt-10 bg-white text-red-600 hover:bg-gray-300 transition px-8 py-4 rounded-xl text-lg text-base font-semibold shadow-xl hover:shadow-2xl transition md:flex hidden">
+        <button className="mt-10 bg-white text-red-600 hover:bg-gray-300 transition px-8 py-4 rounded-xl text-lg text-base font-semibold shadow-xl hover:shadow-2xl transition md:flex mx-auto hidden">
          APPLY NOW
         </button>
 
