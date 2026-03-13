@@ -21,7 +21,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="bg-gray-50 py-10 md:py-16  overflow-hidden">
+    <section className="bg-gray-50 py-10 md:py-12  overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
 
         {/* LEFT */}
@@ -41,7 +41,7 @@ export default function Hero() {
             project experience.
           </p>
 
-          <div className="mt-6 space-y-3">
+          <div className="mt-5 space-y-2">
             {features.map((feature, index) => (
               <div key={index} className="flex items-center gap-3 text-gray-700">
                 <span className="text-red-500">{feature.icon}</span>
@@ -50,7 +50,7 @@ export default function Hero() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <div className="mt-6 flex flex-wrap gap-4">
             <button
               onClick={() => navigate("/phonepe")}
               className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition md:flex hidden"
@@ -66,9 +66,8 @@ export default function Hero() {
         </div>
 
         {/* RIGHT */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          
           className="relative flex justify-center"
         >
           <img
@@ -89,7 +88,7 @@ export default function Hero() {
             <Users size={16} />
             5000+ Students
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>
