@@ -117,14 +117,12 @@ const Form = () => {
       {/* Main Section */}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-red-50 px-4 py-12">
         <div className="w-full max-w-xl bg-white/90 backdrop-blur-sm border border-gray-200 rounded-3xl p-8 shadow-2xl">
-          <h2 className="text-2xl md:text-2xl font-bold text-gray-900 text-center mb-2">
-            Create Account
+          <h2 className="text-2xl md:text-3xl font-bold text-red-500 text-center mb-0">
+            Application Form  
           </h2>
           <p className="text-sm md:text-base  text-gray-500 text-center mb-8">
-            Already have an account?{" "}
-            <a href="#" className="hover:underline text-red-500">
-              Sign in
-            </a>
+            Corporate Internship Program
+            
           </p>
 
           <form onSubmit={handleRegistration} className="space-y-5">
@@ -188,16 +186,29 @@ const Form = () => {
               onChange={(e) => setAddress(e.target.value)}
             />
 
-            <label className="block text-sm font-semibold text-gray-700 mb-3">
-              Company Official WhatsApp Channel
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
+              Company Official WhatsApp Channel <a
+              href="https://whatsapp.com/channel/YOUR_CHANNEL_LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-blue-600 hover:text-blue-700  underline mb-3 block"
+            >
+              Link (Click Now)
+            </a>
             </label>
-            <input
-              type="text"
-              placeholder="WhatsApp Channel Link"
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 focus:outline-none"
+
+            <select
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 
+  focus:ring-2 focus:ring-red-500/20 focus:border-red-500 focus:outline-none"
               value={whatsappChannel}
               onChange={(e) => setWhatsappChannel(e.target.value)}
-            />
+            >
+              <option value="">Select Option</option>
+              <option value="yes">Yes Joined</option>
+              <option value="no">No Joined</option>
+            </select>
+
+      
 
             <label className="block text-sm font-semibold text-gray-700 mb-3">
               Which Department are you interested in Internship? (1st
@@ -206,7 +217,7 @@ const Form = () => {
             </label>
 
             <select
-              className="w-full px-4 py-3 pr-16 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 focus:outline-none"
+              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-red-500/20 focus:border-red-500 focus:outline-none"
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
             >
@@ -289,7 +300,7 @@ const Form = () => {
             <button
               type="submit"
               disabled={status === "loading"}
-              className={`w-full py-3 rounded-xl font-semibold text-white transition-all flex justify-center items-center gap-2 ${
+              className={`w-full py-3 rounded-xl text-white transition-all flex justify-center font-bold items-center gap-2 ${
                 status === "loading"
                   ? "bg-red-400 cursor-not-allowed"
                   : "bg-red-300 hover:bg-red-200 shadow-lg hover:shadow-xl"
@@ -301,14 +312,14 @@ const Form = () => {
                   Processing...
                 </>
               ) : (
-                "SIGN UP"
+                "SUBMIT"
               )}
             </button>
           </form>
 
           {/* Footer */}
           <p className="text-xs text-center text-gray-400 mt-6">
-            By signing up, you agree to our Terms & Privacy Policy
+            By submitting this form, you agree to our Terms and Privacy Policy.
           </p>
         </div>
       </div>
