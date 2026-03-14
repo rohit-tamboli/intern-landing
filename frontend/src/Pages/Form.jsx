@@ -63,7 +63,6 @@ const Form = () => {
         setMessage("Account created successfully!");
 
         setTimeout(() => {
-  
           navigate("/phonepe", {
             state: {
               fullName,
@@ -202,7 +201,7 @@ const Form = () => {
 
             <label className="block text-sm font-semibold text-gray-700 mb-3">
               Which Department are you interested in Internship? (1st
-              Preference) 
+              Preference)
               <span className="text-red-600"> *</span>
             </label>
 
@@ -217,10 +216,6 @@ const Form = () => {
               <option value="Data Science">Data Science</option>
               <option value="Digital Marketing">Digital Marketing</option>
             </select>
-
-            
-
-            
 
             <label className="block text-sm font-semibold text-gray-700 mb-3">
               College / University Name <span className="text-red-600">*</span>

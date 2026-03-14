@@ -63,7 +63,7 @@ export default function Steps() {
         {/* CTA */}
         <div className="mt-12">
           <button
-            onClick={() => navigate("/phonepe")}
+            onClick={() => navigate("/signup")}
             className="px-5 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg md:flex mx-auto hidden"
           >
             APPLY NOW

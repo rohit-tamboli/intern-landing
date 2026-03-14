@@ -52,7 +52,7 @@ export default function Hero() {
 
           <div className="mt-6 flex flex-wrap gap-4">
             <button
-              onClick={() => navigate("/phonepe")}
+              onClick={() => navigate("/signup")}
               className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition md:flex hidden"
             >
               APPLY NOW
