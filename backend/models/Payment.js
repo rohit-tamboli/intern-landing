@@ -15,6 +15,11 @@ const paymentSchema = new mongoose.Schema(
     role: String,
 
     mobileNumber: String,
+    address: String,
+    whatsappChannel: String,
+    department: String,
+    college: String,
+    study: String,
     amount: Number,
 
     status: {

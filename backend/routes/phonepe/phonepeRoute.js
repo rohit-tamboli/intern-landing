@@ -13,6 +13,7 @@ router.get("/payments", async (req, res) => {
 });
 
 router.post('/payment', newPayment);
+
 router.post('/status/:txnId', checkStatus);
 
 export default router;

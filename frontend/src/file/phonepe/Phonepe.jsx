@@ -6,13 +6,18 @@ import { useLocation } from "react-router-dom";
 const Phonepe = () => {
   const [loading2, setLoading2] = useState(false);
   const location = useLocation();
-  const { fullName, email, phone, role } = location.state || {};
+  const { fullName, email, phone, address, whatsappChannel, department, college, study, role } = location.state || {};
 
   const data = {
     name: fullName,
     email: email,
     amount: 2,
     number: phone,
+    address: address,
+    whatsappChannel: whatsappChannel,
+    department: department,
+    college: college,
+    study: study,
     role: role,
     MUID: "MUID" + Date.now(),
     transactionId: "T" + Date.now(),
@@ -70,7 +75,6 @@ const Phonepe = () => {
                     >
                       Pay Now
                     </button>
-                    
                   </div>
                 ) : (
                   <div className="col-12 center">
@@ -93,4 +97,3 @@ const Phonepe = () => {
   );
 };
 export default Phonepe;
-

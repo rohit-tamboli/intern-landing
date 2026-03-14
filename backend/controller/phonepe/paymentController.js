@@ -20,10 +20,18 @@ const newPayment = async (req, res) => {
     await Payment.create({
       merchantTransactionId: merchantTransactionId,
       merchantUserId: req.body.MUID,
+
       name: req.body.name,
-      email: req.body.email, // ✅ added
-      role: req.body.role, // ✅ added
+      email: req.body.email,
+      role: req.body.role,
+
       mobileNumber: req.body.number,
+      address: req.body.address,
+      whatsappChannel: req.body.whatsappChannel,
+      department: req.body.department,
+      college: req.body.college,
+      study: req.body.study,
+
       amount: req.body.amount,
       status: "PENDING",
     });
@@ -83,10 +91,12 @@ const newPayment = async (req, res) => {
 
 const checkStatus = async (req, res) => {
   try {
-    const merchantTransactionId = req.params.txnId;
-    const merchantId = merchant_id;
+    const merchantId = process.env.MERCHANT_ID;
+    const salt_key = process.env.SALT_KEY;
     const keyIndex = process.env.SALT_INDEX;
-
+    
+    const merchantTransactionId = req.params.txnId;
+    
     const string =
       `/pg/v1/status/${merchantId}/${merchantTransactionId}` + salt_key;
 
