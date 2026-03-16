@@ -136,7 +136,11 @@ const checkStatus = async (req, res) => {
     );
 
     // Google Sheet me add
-    await addPaymentToSheet(payment);
+    try {
+      await addPaymentToSheet(payment);
+    } catch (err) {
+      console.error("Google Sheet Error:", err.message);
+    }
 
     return res.redirect(`${process.env.FRONTEND_URL}/failure`);
   } catch (error) {
@@ -149,7 +153,11 @@ const checkStatus = async (req, res) => {
     );
 
     // Google Sheet me add
-    await addPaymentToSheet(payment);
+    try {
+      await addPaymentToSheet(payment);
+    } catch (err) {
+      console.error("Google Sheet Error:", err.message);
+    }
 
     return res.redirect(`${process.env.FRONTEND_URL}/failure`);
   }
