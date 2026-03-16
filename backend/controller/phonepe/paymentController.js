@@ -142,10 +142,14 @@ const checkStatus = async (req, res) => {
   } catch (error) {
     console.error(error.response?.data || error.message);
 
-    await Payment.findOneAndUpdate(
+    const payment = await Payment.findOneAndUpdate(
       { merchantTransactionId: req.params.txnId },
-      { status: "FAILED" }
+      { status: "FAILED" },
+      { new: true }
     );
+
+    // Google Sheet me add
+    await addPaymentToSheet(payment);
 
     return res.redirect(`${process.env.FRONTEND_URL}/failure`);
   }
