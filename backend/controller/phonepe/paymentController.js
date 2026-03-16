@@ -136,28 +136,16 @@ const checkStatus = async (req, res) => {
     );
 
     // Google Sheet me add
-    try {
-      await addPaymentToSheet(payment);
-    } catch (err) {
-      console.error("Google Sheet Error:", err.message);
-    }
+    await addPaymentToSheet(payment);
 
     return res.redirect(`${process.env.FRONTEND_URL}/failure`);
   } catch (error) {
     console.error(error.response?.data || error.message);
 
-    const payment = await Payment.findOneAndUpdate(
+    await Payment.findOneAndUpdate(
       { merchantTransactionId: req.params.txnId },
-      { status: "FAILED" },
-      { new: true }
+      { status: "FAILED" }
     );
-
-    // Google Sheet me add
-    try {
-      await addPaymentToSheet(payment);
-    } catch (err) {
-      console.error("Google Sheet Error:", err.message);
-    }
 
     return res.redirect(`${process.env.FRONTEND_URL}/failure`);
   }
