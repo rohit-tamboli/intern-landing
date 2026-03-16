@@ -1,3 +1,5 @@
 /node_modules
 .env
 Note.txt
+credentials.json
+backend/credentials.json
