@@ -8,18 +8,17 @@ const paymentSchema = new mongoose.Schema(
       unique: true,
     },
     merchantUserId: String,
-    name: String,
 
-    // ✅ New fields
+    name: String,
     email: String,
     role: String,
-
     mobileNumber: String,
     address: String,
     whatsappChannel: String,
     department: String,
     college: String,
     study: String,
+    
     amount: Number,
 
     status: {

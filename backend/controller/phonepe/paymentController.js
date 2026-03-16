@@ -1,6 +1,7 @@
 import crypto from "crypto";
 import axios from "axios";
 import Payment from "../../models/Payment.js";
+import { addPaymentToSheet } from "../../config/googleSheet.js";
 
 const newPayment = async (req, res) => {
   const merchant_id = process.env.MERCHANT_ID;
@@ -24,14 +25,12 @@ const newPayment = async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       role: req.body.role,
-
       mobileNumber: req.body.number,
       address: req.body.address,
       whatsappChannel: req.body.whatsappChannel,
       department: req.body.department,
       college: req.body.college,
       study: req.body.study,
-
       amount: req.body.amount,
       status: "PENDING",
     });
@@ -94,9 +93,9 @@ const checkStatus = async (req, res) => {
     const merchantId = process.env.MERCHANT_ID;
     const salt_key = process.env.SALT_KEY;
     const keyIndex = process.env.SALT_INDEX;
-    
+
     const merchantTransactionId = req.params.txnId;
-    
+
     const string =
       `/pg/v1/status/${merchantId}/${merchantTransactionId}` + salt_key;
 
@@ -117,10 +116,14 @@ const checkStatus = async (req, res) => {
 
     // ✅ Payment Success
     if (response.data.success === true) {
-      await Payment.findOneAndUpdate(
+      const payment = await Payment.findOneAndUpdate(
         { merchantTransactionId },
-        { status: "SUCCESS" }
+        { status: "SUCCESS" },
+        { new: true }
       );
+
+      // Google Sheet me add
+      await addPaymentToSheet(payment);
 
       return res.redirect(`${process.env.FRONTEND_URL}/success`);
     }

@@ -1,0 +1,17 @@
+{
+  "type": "service_account",
+  "project_id": "smart-period-487310-b4",
+  "private_key_id": "832c6a9ba31dcf01a12f5cc996605a931c117b34",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDfDBC+X6rxiB5t\ndkEv69RNr7YCJ7Lvo3tJiwoqeFDORBJjgPHF84LOQQJN4HKg4WhhBMvT3uKC/LaY\nit1LTTXU1ZyVQItFdM6UsUFejgq7RwEbasVS+3bfM/hY6+I6XKbLSqDb51yPR1Wl\nVho1dcTH6Hc56MoxycuaYqPmhEdVgVLL1SaN4vlcH8ZuHv8dAKr8MxwGbUfrVwwk\nvzoAWDFJUgN/odtZz9hPzMPKSx8S5H2ZvJpA+fQluwOSpOe/MtiXzejEWA4pri2M\naAvFvS6/a1n+CsMhG669+wouOaLXVkAmZHVmzrj8C6TVXQ4BWiPDIklKL1BJ30L8\neiigufqpAgMBAAECggEAW8hDO5NybGFu4+w9dtK8Uhtz8f8UCrhjCyhDzqYj2jz4\ntCljU+mYcfceU52AjeMzaHjoxw54dx42pR6/YTUsaaBdBq3AoZwnRdiK5bXdhKL7\nOaT9/d+sUry3/R9TwGBP4mebOeJCnFLmU1rS/hywFPL73MCGM2aueaENgNX95JjG\nBbte7lBnwGKYOBPtmqvdPuSB2X5OlekMB8HxyQCjye2igxNb3B5CpSeZnXfZM0PZ\nvdAVGDGlati3npnWjHNvBkeCSXtxurwa+O/vgm9DHt7qyigSN2uo/dZ0uUvOJE5q\ntjtdlJ/1aU1JkQQSF5d5K5JcF2SQ5rCcOEgICvRE4QKBgQD39uXjZPuBeTZNr78y\njJh+z2VS0N1b7FEONZh6ona/Yx1cfXSaNXMuK0IJerHesjus9w6yLZ9Z01z8g7+G\njS0YNzPtsKe2ta9482Qifpsa3FwyiPsMdxfOeUKjlwArV0nXm1Uip0lLZDNF5t5n\n453vC11zOI1lwHDaGbR5LrKr7wKBgQDmRnRYGo617GHo4mhAKTAg1WDNZ66tdLyd\nGcYihNDYF7TM0iAz23AKoeaNm+gEDNj9k8cEBQNK2ArsfCmaPnVG7hhXt3DmUSh+\nyHOKob5QM9eMhpOoshXLXsYLxEDDNpHFhyEOtE4fg1C2IQS7kqu4JPCU+FZtWo+R\nlQsX1k6K5wKBgHdNx5X9BDVrSIFgSbHci5KX3rxV2etcbDNV/iMi/9ddrMbPZca8\naMqR7Zf5/JKVVrkFtYBtCvqBA4BLM19dlZDNHqMCF++EwwSCtm8SUzY9R+7YkVGS\nC1ZAaZukD2TK/rBKAFBIBK/Nag374o5Bqb9VzISfdQi76pBFRdv4Z+bpAoGAEZUX\nlRKSCvn9j9aZtyxt7FPejFB6Wewr6qLpKgGSIK3OtETnCI6cw3MRM4bP9F82wkXi\nUEBBvBk63EuusYRLWBsd6LSs/ij8OpH7oH4xFdafgq9T3vGaEGkwHf3iJAWqo7Zp\no8HIpUdVhlKHFftg+TJ43CcKEldz1t3Wdv96B8kCgYEAqFICfdeY6w4MSZBjgfEn\n3AQfRW68NTlE7lR2W+dbaqhjDnhqUeubYpyv7LA8R3UucWfG7Qrrat8JUfIAlWVk\nd1PJubcA3zxaMiyPRDAWvs7FGJhHamfSh8HXUN/JKSC8Pui9C7ZO5hdohKCdRQ09\nC4KvSJVSqi4zLgJgxtzM9ZA=\n-----END PRIVATE KEY-----\n",
+  "client_email": "intern-data@smart-period-487310-b4.iam.gserviceaccount.com",
+  "client_id": "111032818226470588295",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/intern-data%40smart-period-487310-b4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
+
+https://docs.google.com/spreadsheets/d/1U4p_AbIfw0ldo3KQ33va5fez1Y__wc6Yf4EJ4AXb2xg/edit?usp=sharing
+
