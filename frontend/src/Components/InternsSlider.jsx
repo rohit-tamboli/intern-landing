@@ -7,32 +7,32 @@ export default function InSlider() {
 
   const In = [
     {
-      name: "Rahul Sharma",
-      role: "Placed at TCS",
+      name: "Suraj Tiwari",
+      role: "Placed at Wipro",
       desc: "₹4.5 LPA",
       img: "/In1.png",
     },
     {
-      name: "Priya Verma",
-      role: "Intern at Wipro",
+      name: "Manya M",
+      role: "Placed at Cognizant",
       desc: "Web Development",
       img: "/In2.png",
     },
     {
-      name: "Amit Patel",
-      role: "Placed at Infosys",
+      name: "Ananya Sindhe",
+      role: "Placed at Flipkart",
       desc: "₹6 LPA",
       img: "/In3.png",
     },
     {
-      name: "Sneha Singh",
-      role: "Intern at Deloitte",
+      name: "Praveen Tomar",
+      role: "Placed at  Maruti Suzuti",
       desc: "Digital Marketing",
       img: "/In4.png",
     },
     {
-      name: "Rohit Gupta",
-      role: "Placed at HCL",
+      name: "Rahul Lodhi",
+      role: "Placed at ITC Limited",
       desc: "₹5 LPA",
       img: "/In5.png",
     },
@@ -121,7 +121,7 @@ export default function InSlider() {
             {loopIn.map((intern, index) => (
               <div
                 key={index}
-                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition flex flex-col justify-between text-center cursor-pointer"
+                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-5 shadow-sm hover:shadow transition flex flex-col gap-5 text-center cursor-pointer "
               >
                 {/* Image */}
                 <img
@@ -140,7 +140,7 @@ export default function InSlider() {
                     {intern.role}
                   </p>
 
-                  <p className="text-xs text-gray-600 mt-1">{intern.desc}</p>
+                  {/* <p className="text-xs text-gray-600 mt-1">{intern.desc}</p> */}
                 </div>
               </div>
             ))}

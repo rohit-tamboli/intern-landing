@@ -24,7 +24,7 @@ export default function Steps() {
   ];
 
   return (
-    <section className="py-16 bg-gray-50 overflow-hidden">
+    <section className="py-16 bg-gray-50 overflow-hidden" id="steps">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Heading */}

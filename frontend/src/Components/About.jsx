@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section className="py-20 bg-gradient-to-r from-red-500 via-red-400 to-red-500     overflow-hidden relative">
+    <section className="py-20 bg-gradient-to-r from-red-500 via-red-400 to-red-500     overflow-hidden relative" id="about">
 
       <div className="max-w-4xl mx-auto px-4 text-center">
 

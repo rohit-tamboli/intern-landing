@@ -6,11 +6,11 @@ export default function ExpertsSlider() {
   const [isPaused, setIsPaused] = useState(false);
 
   const experts = [
-    { name: "B K Unhelkar", role: "Finance Expert", img: "/Ex1.png" },
-    { name: "Arun Sahu", role: "Ex-Adani", img: "/Ex2.png" },
-    { name: "Shraddha", role: "HR Leader", img: "/Ex3.png" },
-    { name: "Dr. Amar", role: "Cipla", img: "/Ex4.png" },
-    { name: "Albin", role: "BCG", img: "/Ex5.png" },
+    { name: "B K Unhelkar", role: "Ex-CEO at LIC", img: "/Ex1.png" },
+    { name: "Shraddha Palekar", role: "Ex-J.P. Morgan", img: "/Ex2.png" },
+    { name: "Albin Benny", role: "Ex-McKinsey & Company", img: "/Ex3.png" },
+    { name: "Neal Vryan C. Versales", role: "Global IT Professional", img: "/Ex4.png" },
+    { name: "Tapas Sarkar", role: "Ex-NITTTR", img: "/Ex5.png" },
   ];
 
   const loopExperts = [...experts, ...experts];

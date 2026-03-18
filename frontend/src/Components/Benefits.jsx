@@ -12,7 +12,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="py-16 bg-white overflow-hidden" id="benefits">
       
       {/* HEADING */}
       <div className="max-w-6xl mx-auto px-4 text-center mb-12">
