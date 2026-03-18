@@ -35,7 +35,9 @@ export default function Steps() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-gray-900"
         >
-          How To Apply
+          How To <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
+            Apply
+          </span>
         </motion.h2>
 
         <motion.p
@@ -69,7 +71,7 @@ export default function Steps() {
                 transition={{ delay: index * 0.3 }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10, scale: 1.03 }}
-                className="relative bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition group"
+                className="relative bg-white p-8 rounded-2xl shadow-md border border-gray-100 hover:shadow-xl transition group cursor-pointer"
               >
                 {/* Glow */}
                 <div className="absolute inset-0 rounded-2xl bg-red-100 opacity-0 group-hover:opacity-20 blur-xl transition"></div>
@@ -108,7 +110,7 @@ export default function Steps() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => navigate("/signup")}
-            className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg mx-auto hidden md:flex"
+            className="px-6 py-3 bg-red-500 text-white font-semibold rounded-lg shadow hover:bg-red-600 transition text-lg mx-auto hidden md:flex cursor-pointer"
           >
             APPLY NOW
           </motion.button>
@@ -116,12 +118,7 @@ export default function Steps() {
 
       </div>
 
-      {/* Background Glow */}
-      <motion.div
-        animate={{ opacity: [0.2, 0.5, 0.2] }}
-        transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-0 left-0 w-72 h-72 bg-red-200 rounded-full blur-3xl"
-      />
+      
 
     </section>
   );

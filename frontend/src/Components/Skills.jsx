@@ -65,7 +65,7 @@ export default function Skills() {
               transition={{ delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -10, scale: 1.03 }}
-              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition relative group"
+              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition relative group cursor-pointer"
             >
               {/* Glow Effect */}
               <div className="absolute inset-0 rounded-2xl bg-red-100 opacity-0 group-hover:opacity-20 blur-xl transition"></div>
@@ -95,12 +95,7 @@ export default function Skills() {
 
       </div>
 
-      {/* Background Glow */}
-      <motion.div
-        animate={{ opacity: [0.2, 0.5, 0.2] }}
-        transition={{ duration: 5, repeat: Infinity }}
-        className="absolute top-0 right-0 w-72 h-72 bg-red-200 rounded-full blur-3xl"
-      />
+    
 
     </section>
   );

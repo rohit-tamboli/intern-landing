@@ -11,7 +11,6 @@ export default function ExpertsSlider() {
     { name: "Shraddha", role: "HR Leader", img: "/Ex3.png" },
     { name: "Dr. Amar", role: "Cipla", img: "/Ex4.png" },
     { name: "Albin", role: "BCG", img: "/Ex5.png" },
-    
   ];
 
   const loopExperts = [...experts, ...experts];
@@ -52,7 +51,6 @@ export default function ExpertsSlider() {
   return (
     <section className="pb-16 pt-8 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
-
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Meet Our{" "}
           <span className="bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
@@ -91,10 +89,10 @@ export default function ExpertsSlider() {
             className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar"
           >
             {loopExperts.map((expert, index) => (
-                <div
-                    key={index}
-                    className="min-w-[220px] h-[240px] bg-white rounded-2xl p-6 text-center"
-                >
+              <div
+                key={index}
+                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-6 text-center cursor-pointer"
+              >
                 <img
                   src={expert.img}
                   className="w-32 h-32 mx-auto rounded-full border-4 border-red-500 mb-4"
@@ -106,7 +104,6 @@ export default function ExpertsSlider() {
               </div>
             ))}
           </div>
-
         </div>
       </div>
     </section>

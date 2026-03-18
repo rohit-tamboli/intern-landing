@@ -63,7 +63,7 @@ export default function CTA() {
           whileHover={{ scale: 1.07 }}
           whileTap={{ scale: 0.95 }}
           animate={{ scale: [1, 1.05, 1] }}
-          className="mt-10 bg-white text-red-600 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl mx-auto hidden md:flex"
+          className="mt-10 bg-white text-red-600 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:shadow-2xl mx-auto hidden md:flex cursor-pointer"
           onClick={() => navigate("/signup")}
         >
           APPLY NOW

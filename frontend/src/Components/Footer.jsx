@@ -108,12 +108,7 @@ export default function Footer() {
         © {new Date().getFullYear()} upDate Internship Program. All rights reserved.
       </motion.div>
 
-      {/* Glow */}
-      <motion.div
-        animate={{ opacity: [0.1, 0.3, 0.1] }}
-        transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-0 left-0 w-72 h-72 bg-red-200 rounded-full blur-3xl"
-      />
+    
 
     </footer>
   );

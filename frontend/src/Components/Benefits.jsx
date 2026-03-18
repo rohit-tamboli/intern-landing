@@ -50,7 +50,7 @@ export default function Benefits() {
         
         {/* LEFT */}
         <div>
-          <div className="mt-6 grid gap-5">
+          <div className="mt-6 grid gap-5 cursor-pointer">
             {benefits.map((item, index) => (
               <motion.div
                 key={index}

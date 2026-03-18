@@ -121,7 +121,7 @@ export default function InSlider() {
             {loopIn.map((intern, index) => (
               <div
                 key={index}
-                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition flex flex-col justify-between text-center"
+                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition flex flex-col justify-between text-center cursor-pointer"
               >
                 {/* Image */}
                 <img

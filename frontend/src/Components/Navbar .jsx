@@ -61,7 +61,7 @@ export default function Navbar() {
               className="hidden md:inline-block bg-red-500 hover:bg-red-600 
                          text-white text-sm md:text-lg 
                          px-4 md:px-6 py-2 
-                         rounded-lg font-semibold shadow-md"
+                         rounded-lg font-semibold shadow-md cursor-pointer"
             >
               APPLY NOW
             </motion.button>
