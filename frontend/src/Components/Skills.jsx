@@ -27,30 +27,58 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50 overflow-hidden">
 
       <div className="max-w-6xl mx-auto px-6 text-center">
 
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+        {/* Heading */}
+        <motion.h2
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-gray-900"
+        >
           What You Will <span className="text-red-500">Learn</span>
-        </h2>
+        </motion.h2>
 
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
+        {/* Paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.7 }}
+          viewport={{ once: true }}
+          className="mt-4 text-gray-600 max-w-2xl mx-auto"
+        >
           Gain practical knowledge across multiple domains and build the
           skills required to succeed in real corporate environments.
-        </p>
+        </motion.p>
 
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
 
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              whileHover={{ y: -8 }}
-              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-lg transition"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.03 }}
+              className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl transition relative group"
             >
-              <div className="flex justify-center text-red-500 mb-5">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 rounded-2xl bg-red-100 opacity-0 group-hover:opacity-20 blur-xl transition"></div>
+
+              {/* Icon */}
+              <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ delay: 0.3 + index * 0.2 }}
+                className="flex justify-center text-red-500 mb-5"
+              >
                 {skill.icon}
-              </div>
+              </motion.div>
 
               <h3 className="text-lg font-semibold text-gray-900">
                 {skill.title}
@@ -66,6 +94,13 @@ export default function Skills() {
         </div>
 
       </div>
+
+      {/* Background Glow */}
+      <motion.div
+        animate={{ opacity: [0.2, 0.5, 0.2] }}
+        transition={{ duration: 5, repeat: Infinity }}
+        className="absolute top-0 right-0 w-72 h-72 bg-red-200 rounded-full blur-3xl"
+      />
 
     </section>
   );
