@@ -125,7 +125,7 @@ export default function Footer() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
         viewport={{ once: true }}
-        className="border-t border-gray-200 mt-12 pt-6 mb-17 text-center text-sm text-gray-500"
+        className="border-t border-gray-200 mt-12 pt-6 md:mb-1 mb-17 text-center text-sm text-gray-500"
       >
         © {new Date().getFullYear()} upDate is a part of upDt Education Technology Private Limited All rights reserved.
       </motion.div>
