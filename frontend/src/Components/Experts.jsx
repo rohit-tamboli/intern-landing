@@ -93,11 +93,11 @@ export default function ExpertsSlider() {
             {loopExperts.map((expert, index) => (
                 <div
                     key={index}
-                    className="min-w-[220px] h-[200px] bg-white rounded-2xl p-6 text-center"
+                    className="min-w-[220px] h-[240px] bg-white rounded-2xl p-6 text-center"
                 >
                 <img
                   src={expert.img}
-                  className="w-20 h-20 mx-auto rounded-full border-4 border-red-500 mb-4"
+                  className="w-32 h-32 mx-auto rounded-full border-4 border-red-500 mb-4"
                   alt=""
                 />
 

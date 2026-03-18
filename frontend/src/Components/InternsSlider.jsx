@@ -121,13 +121,13 @@ export default function InSlider() {
             {loopIn.map((intern, index) => (
               <div
                 key={index}
-                className="min-w-[220px] h-[200px] bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition flex flex-col justify-between text-center"
+                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-5 shadow-sm hover:shadow-lg transition flex flex-col justify-between text-center"
               >
                 {/* Image */}
                 <img
                   src={intern.img}
                   alt={intern.name}
-                  className="w-20 h-20 mx-auto rounded-full border-4 border-red-500 object-cover"
+                  className="w-32 h-32 mx-auto rounded-full border-4 border-red-500 object-cover"
                 />
 
                 {/* Content */}
