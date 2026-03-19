@@ -20,7 +20,8 @@ export default function Hero() {
   useEffect(() => {
     const currentText = texts[textIndex];
 
-    let speed = isDeleting ? 30 : 60;
+    let typingSpeed = isDeleting ? 30 : 60;
+    let pauseTime = 1200;
 
     const timeout = setTimeout(() => {
       if (!isDeleting) {
@@ -28,8 +29,7 @@ export default function Hero() {
         setCharIndex((prev) => prev + 1);
 
         if (charIndex === currentText.length) {
-          setIsDeleting(true);
-          setTimeout(() => {}, 1000); // pause
+          setTimeout(() => setIsDeleting(true), pauseTime);
         }
       } else {
         setDisplayText(currentText.substring(0, charIndex - 1));
@@ -40,7 +40,7 @@ export default function Hero() {
           setTextIndex((prev) => (prev + 1) % texts.length);
         }
       }
-    }, speed);
+    }, typingSpeed);
 
     return () => clearTimeout(timeout);
   }, [charIndex, isDeleting, textIndex]);
@@ -97,16 +97,14 @@ export default function Hero() {
           {/* Features */}
           <div className="mt-5 space-y-2">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + index * 0.2 }}
-                className="flex items-center gap-3 text-gray-700"
+                className="flex items-center gap-3 text-gray-700 animate-fadeIn"
+                style={{ animationDelay: `${0.3 + index * 0.2}s` }}
               >
                 <span className="text-red-500">{feature.icon}</span>
                 <span>{feature.text}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -155,13 +153,7 @@ export default function Hero() {
           className="relative flex justify-center"
         >
           {/* Floating Image */}
-          <motion.img
-            src="/internship.png"
-            alt="Internship"
-            className="w-full max-w-lg"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3 }}
-          />
+          <img src="/internship.png" className="w-full max-w-lg float-smooth" />
 
           {/* Floating Cards */}
           <motion.div

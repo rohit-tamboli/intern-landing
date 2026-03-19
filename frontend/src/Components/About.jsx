@@ -1,42 +1,45 @@
 import { motion } from "framer-motion";
 
 export default function About() {
+  // reusable animation
+  const fadeUp = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-r from-red-500 via-red-400 to-red-500     overflow-hidden relative" id="about">
-
+    <section
+      id="about"
+      className="py-20 bg-gradient-to-r from-red-500 via-red-400 to-red-500 overflow-hidden relative section-smooth"
+    >
       <div className="max-w-4xl mx-auto px-4 text-center">
-
+        
         {/* Heading */}
         <motion.h2
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          viewport={{ once: true }}
+          {...fadeUp}
+          transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-white leading-tight"
         >
           Welcome to{" "}
-          <span className="bg-white/20 px-3 py-1 rounded-lg backdrop-blur-sm">
+          <span className="bg-white/20 px-3 py-1 rounded-lg backdrop-blur-sm animate-pulse">
             upDate
           </span>
         </motion.h2>
 
-        {/* Sub Heading (NEW 🔥) */}
+        {/* Sub Heading */}
         <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          {...fadeUp}
           transition={{ delay: 0.2 }}
-          viewport={{ once: true }}
           className="mt-4 text-white/90 text-lg md:text-xl font-medium"
         >
           Transforming learners into corporate-ready professionals
         </motion.p>
 
-        {/* Paragraph 1 */}
+        {/* Paragraph */}
         <motion.p
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          {...fadeUp}
           transition={{ delay: 0.4 }}
-          viewport={{ once: true }}
           className="mt-6 text-white max-w-2xl mx-auto text-base md:text-lg leading-relaxed"
         >
           upDate is an industry-focused EdTech initiative led by IIT Alumni,
@@ -44,12 +47,12 @@ export default function About() {
           industry demands through practical, job-oriented certification programs.
         </motion.p>
 
-        {/* Highlight Line (🔥 Powerful) */}
+        {/* Highlight Line */}
         <motion.p
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6 }}
           viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
           className="mt-6 text-white font-semibold text-lg"
         >
           We don’t just teach —{" "}
@@ -57,22 +60,12 @@ export default function About() {
             we prepare you for the corporate world.
           </span>
         </motion.p>
-
       </div>
 
-      {/* Glow Effect */}
-      <motion.div
-        animate={{ opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 4, repeat: Infinity }}
-        className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl"
-      />
+      {/* Glow Effects (Optimized) */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-2xl opacity-40 animate-pulse"></div>
 
-      <motion.div
-        animate={{ opacity: [0.2, 0.5, 0.2] }}
-        transition={{ duration: 5, repeat: Infinity }}
-        className="absolute bottom-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl"
-      />
-
+      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-2xl opacity-30 animate-pulse"></div>
     </section>
   );
 }

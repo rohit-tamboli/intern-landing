@@ -1,3 +1,4 @@
+/* ================= SCROLLBAR ================= */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -7,21 +8,66 @@
   scrollbar-width: none;     /* Firefox */
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+/* ================= GLOBAL ================= */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* ================= PERFORMANCE ================= */
+.section-smooth {
+  will-change: transform, opacity;
 }
 
-/* GPU acceleration */
 .slider-smooth {
   will-change: scroll-position;
 }
 
-html, body {
-  height: 100%;
-  overflow-x: hidden;
+/* ================= FLOAT ANIMATION ================= */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-smooth {
+  animation: floatY 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ================= FADE IN ================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* ================= FADE UP ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+/* ================= DELAY ================= */
+.delay-200 {
+  animation-delay: 0.2s;
 }
