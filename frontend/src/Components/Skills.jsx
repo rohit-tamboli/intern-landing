@@ -39,7 +39,7 @@ export default function Skills() {
         <motion.h2
           {...fadeUp}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-5xl font-bold text-gray-900"
+          className="text-3xl md:text-4xl font-bold text-gray-900"
         >
           What You Will{" "}
           <span className="text-red-500">Learn</span>
