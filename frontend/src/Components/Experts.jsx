@@ -15,6 +15,12 @@ export default function ExpertsSlider() {
       img: "/Ex5.png",
     },
     { name: "Tapas Sarkar", role: "Ex-NITTTR", img: "/Ex4.png" },
+
+    { name: "Biplab Maity", role: "Ex-Vodafone Idea", img: "/Ex6.png" },
+    { name: "Arun Sahu", role: "Ex-HMEL | HPCL | Adani Group", img: "/Ex7.png" },
+    { name: "Stuti Nayak Panda", role: "Women Entrepreneur", img: "/Ex8.png" },
+    { name: "Dr. Namburi L A Amarababu", role: "Ex-Cipla | Dr. Reddy's", img: "/Ex9.png" },
+    { name: "Dr. Reetha Dinesh", role: "Ex-Corporate Trainer", img: "/Ex10.png" },
   ];
 
   const loopExperts = [...experts, ...experts];
@@ -103,7 +109,7 @@ export default function ExpertsSlider() {
             {loopExperts.map((expert, index) => (
               <div
                 key={index}
-                className="min-w-[220px] h-[240px] bg-white rounded-2xl p-6 text-center cursor-pointer"
+                className="min-w-[220px] h-[260px] bg-white rounded-2xl p-6 text-center cursor-pointer"
               >
                 <img
                   src={expert.img}

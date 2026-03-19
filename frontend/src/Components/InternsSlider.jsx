@@ -36,6 +36,48 @@ export default function InSlider() {
       desc: "₹5 LPA",
       img: "/In5.png",
     },
+    {
+      name: "Praveen Parashar",
+      role: "Placed at HYUNDAI",
+      desc: "₹5 LPA",
+      img: "/In6.png",
+    },
+    {
+      name: "Sinana K",
+      role: "Placed at Infosys",
+      desc: "₹5 LPA",
+      img: "/In7.png",
+    },
+    {
+      name: "Sameer Khan",
+      role: "Placed at PARLE",
+      desc: "₹5 LPA",
+      img: "/In8.png",
+    },
+    {
+      name: "Amit Kumar Mahato",
+      role: "Placed at upDate",
+      desc: "₹5 LPA",
+      img: "/In9.png",
+    },
+    {
+      name: "Mayur Digambar ",
+      role: "Placed at AlignerAi",
+      desc: "₹5 LPA",
+      img: "/In10.png",
+    },
+    {
+      name: "Sandhya Pal",
+      role: "Placed at UCO BANK",
+      desc: "₹5 LPA",
+      img: "/In11.png",
+    },
+    {
+      name: "Sanjana Bhanajdeo",
+      role: "Placed at UCO BANK",
+      desc: "₹5 LPA",
+      img: "/In12.png",
+    },
   ];
 
   const loopIn = [...In, ...In];
