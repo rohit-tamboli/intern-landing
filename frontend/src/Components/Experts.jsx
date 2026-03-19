@@ -9,7 +9,11 @@ export default function ExpertsSlider() {
     { name: "B K Unhelkar", role: "Ex-CEO at LIC", img: "/Ex1.png" },
     { name: "Shraddha Palekar", role: "Ex-J.P. Morgan", img: "/Ex2.png" },
     { name: "Albin Benny", role: "Ex-McKinsey & Company", img: "/Ex3.png" },
-    { name: "Neal Vryan C. Versales", role: "Global IT Professional", img: "/Ex5.png" },
+    {
+      name: "Neal Vryan C. Versales",
+      role: "Global IT Professional",
+      img: "/Ex5.png",
+    },
     { name: "Tapas Sarkar", role: "Ex-NITTTR", img: "/Ex4.png" },
   ];
 
@@ -21,20 +25,28 @@ export default function ExpertsSlider() {
     if (!slider) return;
 
     let animationFrame;
+    let lastTime = 0;
 
-    const scroll = () => {
+    const speed = 0.15; // control speed (smooth)
+
+    const scroll = (time) => {
+      if (!lastTime) lastTime = time;
+      const delta = time - lastTime;
+      lastTime = time;
+
       if (!isPaused) {
-        slider.scrollLeft += 2;
+        slider.scrollLeft += speed * delta;
 
-        // infinite loop reset
+        // smooth reset (no jump)
         if (slider.scrollLeft >= slider.scrollWidth / 2) {
-          slider.scrollLeft = 0;
+          slider.scrollLeft -= slider.scrollWidth / 2;
         }
       }
+
       animationFrame = requestAnimationFrame(scroll);
     };
 
-    scroll();
+    animationFrame = requestAnimationFrame(scroll);
 
     return () => cancelAnimationFrame(animationFrame);
   }, [isPaused]);
@@ -86,7 +98,7 @@ export default function ExpertsSlider() {
           {/* Slider */}
           <div
             ref={sliderRef}
-            className="flex gap-8 overflow-x-auto scroll-smooth no-scrollbar"
+            className="flex gap-8 overflow-x-auto no-scrollbar slider-smooth"
           >
             {loopExperts.map((expert, index) => (
               <div

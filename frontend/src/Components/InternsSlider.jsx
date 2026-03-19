@@ -45,22 +45,31 @@ export default function InSlider() {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    let frame;
+    let animationFrame;
+    let lastTime = 0;
 
-    const scroll = () => {
+    const speed = 0.15; // control speed (smooth)
+
+    const scroll = (time) => {
+      if (!lastTime) lastTime = time;
+      const delta = time - lastTime;
+      lastTime = time;
+
       if (!isPaused) {
-        slider.scrollLeft += 2;
+        slider.scrollLeft += speed * delta;
 
+        // smooth reset (no jump)
         if (slider.scrollLeft >= slider.scrollWidth / 2) {
-          slider.scrollLeft = 0;
+          slider.scrollLeft -= slider.scrollWidth / 2;
         }
       }
-      frame = requestAnimationFrame(scroll);
+
+      animationFrame = requestAnimationFrame(scroll);
     };
 
-    scroll();
+    animationFrame = requestAnimationFrame(scroll);
 
-    return () => cancelAnimationFrame(frame);
+    return () => cancelAnimationFrame(animationFrame);
   }, [isPaused]);
 
   // BUTTONS
@@ -116,7 +125,7 @@ export default function InSlider() {
           {/* Track */}
           <div
             ref={sliderRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth no-scrollbar"
+            className="flex gap-8 overflow-x-auto no-scrollbar slider-smooth"
           >
             {loopIn.map((intern, index) => (
               <div
