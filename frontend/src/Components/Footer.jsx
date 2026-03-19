@@ -61,7 +61,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.2 }}
             >
-              <FaWhatsapp className="cursor-pointer text-gray-600 hover:text-green-500 text-2xl" />
+              <FaWhatsapp className="cursor-pointer text-gray-600 hover:text-green-500 text-[25px]" />
             </motion.a>
           </div>
         </motion.div>
