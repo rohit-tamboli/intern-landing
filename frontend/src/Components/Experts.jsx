@@ -9,8 +9,8 @@ export default function ExpertsSlider() {
     { name: "B K Unhelkar", role: "Ex-CEO at LIC", img: "/Ex1.png" },
     { name: "Shraddha Palekar", role: "Ex-J.P. Morgan", img: "/Ex2.png" },
     { name: "Albin Benny", role: "Ex-McKinsey & Company", img: "/Ex3.png" },
-    { name: "Neal Vryan C. Versales", role: "Global IT Professional", img: "/Ex4.png" },
-    { name: "Tapas Sarkar", role: "Ex-NITTTR", img: "/Ex5.png" },
+    { name: "Neal Vryan C. Versales", role: "Global IT Professional", img: "/Ex5.png" },
+    { name: "Tapas Sarkar", role: "Ex-NITTTR", img: "/Ex4.png" },
   ];
 
   const loopExperts = [...experts, ...experts];
@@ -24,7 +24,7 @@ export default function ExpertsSlider() {
 
     const scroll = () => {
       if (!isPaused) {
-        slider.scrollLeft += 0.5;
+        slider.scrollLeft += 2;
 
         // infinite loop reset
         if (slider.scrollLeft >= slider.scrollWidth / 2) {

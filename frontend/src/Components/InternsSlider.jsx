@@ -49,7 +49,7 @@ export default function InSlider() {
 
     const scroll = () => {
       if (!isPaused) {
-        slider.scrollLeft += 0.5;
+        slider.scrollLeft += 2;
 
         if (slider.scrollLeft >= slider.scrollWidth / 2) {
           slider.scrollLeft = 0;
