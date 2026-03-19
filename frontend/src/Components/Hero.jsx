@@ -56,7 +56,7 @@ export default function Hero() {
     },
     {
       icon: <Award size={20} />,
-      text: "₹10,000 Performance Bonus",
+      text: "Up to ₹10,000 Bonus",
     },
   ];
 
@@ -171,7 +171,7 @@ export default function Hero() {
             transition={{ delay: 1.2 }}
             className="hidden md:block absolute bottom-12 right-10 bg-white shadow-lg rounded-xl px-4 py-3 text-sm"
           >
-            💰 ₹10,000 Bonus
+            💰 Up to ₹10,000 Bonus
           </motion.div>
 
           <motion.div
