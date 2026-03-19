@@ -20,3 +20,8 @@
 .slider-smooth {
   will-change: scroll-position;
 }
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}

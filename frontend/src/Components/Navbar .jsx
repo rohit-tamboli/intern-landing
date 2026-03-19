@@ -71,19 +71,21 @@ export default function Navbar() {
 
       {/* 📱 MOBILE CTA */}
       <motion.div
-        initial={{ y: 100 }}
-        animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="fixed bottom-0 left-0 w-full md:hidden bg-white border-t border-gray-200 shadow-lg p-3 z-50"
-      >
+  initial={false}
+  className="fixed bottom-0 left-0 w-full md:hidden 
+             bg-white border-t border-gray-200 shadow-lg 
+             px-3 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] 
+             z-50"
+>
         <motion.button
           whileTap={{ scale: 0.95 }}
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ repeat: Infinity, duration: 1.5 }}
           onClick={() => navigate("/signup")}
           className="w-full bg-red-500 hover:bg-red-600 
-                     text-white py-3 rounded-xl 
-                     font-semibold shadow-md"
+           text-white py-3 rounded-xl 
+           font-semibold shadow-md 
+           mb-[env(safe-area-inset-bottom)]"
         >
           APPLY NOW
         </motion.button>
