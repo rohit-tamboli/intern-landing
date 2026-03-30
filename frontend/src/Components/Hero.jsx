@@ -39,7 +39,7 @@ export default function Hero() {
           }
         }
       },
-      isDeleting ? 20 : 40
+      isDeleting ? 25 : 50
     ); // speed control
 
     return () => clearInterval(interval);

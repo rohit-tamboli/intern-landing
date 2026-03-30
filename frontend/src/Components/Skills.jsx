@@ -83,7 +83,7 @@ export default function Skills() {
                 stiffness: 90,
                 damping: 18
               }}
-              whileHover={{ y: -6, scale: 1.02 }}
+              whileHover={{ y: -4, scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="bg-white rounded-2xl shadow-md hover:shadow-lg transition group"
               style={{ willChange: "transform" }}

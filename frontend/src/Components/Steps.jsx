@@ -83,7 +83,7 @@ export default function Steps() {
                 variants={fadeUp}
                 transition={{
                   type: "spring",
-                  stiffness: 90,
+                  stiffness: 70,
                   damping: 18
                 }}
                 whileHover={{ y: -6, scale: 1.02 }}
