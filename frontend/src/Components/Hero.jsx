@@ -153,15 +153,15 @@ export default function Hero() {
           className="relative flex justify-center"
         >
           {/* Floating Image */}
-          <img src="/internship.png" className="w-full max-w-lg float-smooth" />
-          {/* <img src="/Pho.png" className="w-full max-w-lg float-smooth rounded-2xl" /> */}
+          {/* <img src="/internship.png" className="w-full max-w-lg float-smooth" /> */}
+          <img src="/Pho.png" className="w-full max-w-lg float-smooth rounded-2xl" />
 
           {/* Floating Cards */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="hidden md:block absolute top-24 left-0 bg-white shadow-lg rounded-xl px-4 py-3 text-sm"
+            className="hidden md:block absolute top-5 left-0 bg-white shadow-lg rounded-xl px-4 py-3 text-sm"
           >
             🎓 5+ Certifications
           </motion.div>
@@ -170,7 +170,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="hidden md:block absolute bottom-12 right-10 bg-white shadow-lg rounded-xl px-4 py-3 text-sm"
+            className="hidden md:block absolute bottom-5 right-10 bg-white shadow-lg rounded-xl px-4 py-3 text-sm"
           >
             💰 Up to ₹10,000 Bonus
           </motion.div>
