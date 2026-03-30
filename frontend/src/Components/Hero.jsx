@@ -138,7 +138,7 @@ export default function Hero() {
                 link.click();
                 document.body.removeChild(link);
               }}
-              className="px-6 py-3 border border-gray-300 rounded-lg font-semibold hover:bg-gray-100 transition"
+              className="px-4 md:px-6 py-2 md:py-3 sm:text-base border-1 border-red-300 rounded-lg font-semibold hover:bg-red-100 transition text-red-500"
             >
               VIEW DETAILS
             </motion.button>
