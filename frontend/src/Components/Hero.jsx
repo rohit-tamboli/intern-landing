@@ -61,7 +61,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="bg-gray-50 py-10 md:py-12 overflow-hidden">
+    <section className="bg-white py-10 md:py-12 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6 md:px-4 grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* LEFT */}
         <motion.div

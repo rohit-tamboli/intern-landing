@@ -67,7 +67,7 @@ export default function ExpertsSlider() {
   };
 
   return (
-    <section className="pb-16 pt-8 bg-gray-50">
+    <section className="pb-16 pt-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Meet Our{" "}
@@ -75,6 +75,10 @@ export default function ExpertsSlider() {
             Experts
           </span>
         </h2>
+
+        <p className="mt-4 text-gray-600 max-w-xl mx-auto">
+          Our experts bring real-world experience and industry knowledge to guide success.
+        </p>
 
         {/* Slider Container */}
         <div
@@ -98,9 +102,9 @@ export default function ExpertsSlider() {
           </button>
 
           {/* Fade */}
-          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
-
+          <div className="absolute left-0 top-0 w-20 h-full bg-gradient-to-r from-white to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 w-20 h-full bg-gradient-to-l from-white to-transparent z-10"></div>
+ 
           {/* Slider */}
           <div
             ref={sliderRef}

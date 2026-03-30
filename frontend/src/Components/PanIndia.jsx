@@ -8,7 +8,7 @@ export default function PanIndia() {
   };
 
   return (
-    <section className="py-20 bg-gray-50 overflow-hidden">
+    <section className="py-20 bg-white overflow-hidden">
 
       {/* ✅ Parent stagger */}
       <motion.div
