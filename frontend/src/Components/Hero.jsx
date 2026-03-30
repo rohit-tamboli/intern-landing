@@ -20,29 +20,29 @@ export default function Hero() {
   useEffect(() => {
     const currentText = texts[textIndex];
 
-    let typingSpeed = isDeleting ? 30 : 60;
-    let pauseTime = 1200;
+    const interval = setInterval(
+      () => {
+        if (!isDeleting) {
+          setDisplayText(currentText.substring(0, charIndex + 1));
+          setCharIndex((prev) => prev + 1);
 
-    const timeout = setTimeout(() => {
-      if (!isDeleting) {
-        setDisplayText(currentText.substring(0, charIndex + 1));
-        setCharIndex((prev) => prev + 1);
+          if (charIndex >= currentText.length) {
+            setIsDeleting(true);
+          }
+        } else {
+          setDisplayText(currentText.substring(0, charIndex - 1));
+          setCharIndex((prev) => prev - 1);
 
-        if (charIndex === currentText.length) {
-          setTimeout(() => setIsDeleting(true), pauseTime);
+          if (charIndex <= 0) {
+            setIsDeleting(false);
+            setTextIndex((prev) => (prev + 1) % texts.length);
+          }
         }
-      } else {
-        setDisplayText(currentText.substring(0, charIndex - 1));
-        setCharIndex((prev) => prev - 1);
+      },
+      isDeleting ? 20 : 40
+    ); // speed control
 
-        if (charIndex === 0) {
-          setIsDeleting(false);
-          setTextIndex((prev) => (prev + 1) % texts.length);
-        }
-      }
-    }, typingSpeed);
-
-    return () => clearTimeout(timeout);
+    return () => clearInterval(interval);
   }, [charIndex, isDeleting, textIndex]);
 
   const features = [
@@ -154,6 +154,7 @@ export default function Hero() {
         >
           {/* Floating Image */}
           <img src="/internship.png" className="w-full max-w-lg float-smooth" />
+          {/* <img src="/Pho.png" className="w-full max-w-lg float-smooth rounded-2xl" /> */}
 
           {/* Floating Cards */}
           <motion.div

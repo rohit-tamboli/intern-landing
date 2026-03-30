@@ -1,19 +1,30 @@
 import { motion } from "framer-motion";
 
 export default function PanIndia() {
+
+  const fadeUp = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+  };
+
   return (
     <section className="py-20 bg-gray-50 overflow-hidden">
 
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      {/* ✅ Parent stagger */}
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ staggerChildren: 0.15 }}
+        className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
 
-        {/* LEFT - TEXT */}
-        <div>
+        {/* LEFT */}
+        <motion.div className="space-y-4">
 
           <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
+            variants={fadeUp}
+            transition={{ type: "spring", stiffness: 80, damping: 18 }}
             className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight"
           >
             Our{" "}
@@ -23,11 +34,9 @@ export default function PanIndia() {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mt-6 text-gray-600 leading-relaxed"
+            variants={fadeUp}
+            transition={{ type: "spring", stiffness: 80, damping: 18 }}
+            className="mt-4 text-gray-600 leading-relaxed"
           >
             We are building a strong presence across India to create wider career
             opportunities for our learners. With connections in major metropolitan
@@ -36,23 +45,20 @@ export default function PanIndia() {
           </motion.p>
 
           <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            viewport={{ once: true }}
-            className="mt-4 text-gray-600 leading-relaxed"
+            variants={fadeUp}
+            transition={{ type: "spring", stiffness: 80, damping: 18 }}
+            className="text-gray-600 leading-relaxed"
           >
             Through our growing network, learners gain access to internship and
             job opportunities across India, making their career prospects stronger
             and more scalable.
           </motion.p>
 
-          {/* Stats (optional but powerful) */}
+          {/* Stats */}
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-8 flex gap-8"
+            variants={fadeUp}
+            transition={{ type: "spring", stiffness: 80, damping: 18 }}
+            className="mt-6 flex gap-8"
           >
             <div>
               <h3 className="text-2xl font-bold text-red-500">15+ States</h3>
@@ -65,24 +71,22 @@ export default function PanIndia() {
             </div>
           </motion.div>
 
-        </div>
+        </motion.div>
 
-        {/* RIGHT - MAP IMAGE */}
+        {/* RIGHT */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          variants={fadeUp}
+          transition={{ type: "spring", stiffness: 80, damping: 18 }}
           className="flex justify-center"
         >
           <img
-            src="/india-map.png"  // 👈 replace with your image path
+            src="/india-map.png"
             alt="PAN India Presence"
             className="w-full max-w-md object-contain"
           />
         </motion.div>
 
-      </div>
+      </motion.div>
 
     </section>
   );

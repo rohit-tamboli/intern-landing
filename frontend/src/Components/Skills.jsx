@@ -24,11 +24,10 @@ export default function Skills() {
     },
   ];
 
-  // same animation as Benefits
+  // ✅ Smooth animation
   const fadeUp = {
-    initial: { opacity: 0, y: 30 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
   };
 
   return (
@@ -37,17 +36,30 @@ export default function Skills() {
 
         {/* Heading */}
         <motion.h2
-          {...fadeUp}
-          transition={{ duration: 0.6 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 18
+          }}
           className="text-3xl md:text-4xl font-bold text-gray-900"
         >
           What You Will{" "}
           <span className="text-red-500">Learn</span>
         </motion.h2>
 
+        {/* Subheading */}
         <motion.p
-          {...fadeUp}
-          transition={{ delay: 0.2 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 18
+          }}
           className="mt-4 text-gray-600 max-w-2xl mx-auto"
         >
           Gain practical knowledge across multiple domains and build the skills
@@ -55,24 +67,34 @@ export default function Skills() {
         </motion.p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ staggerChildren: 0.12 }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16"
+        >
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              {...fadeUp}
-              transition={{ delay: index * 0.15 }}   // 👈 stagger effect
-              whileHover={{ y: -10, scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className="bg-white rounded-2xl shadow-md hover:shadow-xl 
-                         transition group will-change-transform"
+              variants={fadeUp}
+              transition={{
+                type: "spring",
+                stiffness: 90,
+                damping: 18
+              }}
+              whileHover={{ y: -6, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white rounded-2xl shadow-md hover:shadow-lg transition group"
+              style={{ willChange: "transform" }}
             >
               {/* Image */}
-              <div className="overflow-hidden">
+              <div className="overflow-hidden rounded-t-2xl">
                 <img
                   src={skill.img}
                   alt={skill.title}
                   className="w-full h-40 object-cover 
-                             group-hover:scale-110 transition duration-500"
+                             group-hover:scale-105 transition duration-300"
                 />
               </div>
 
@@ -88,7 +110,7 @@ export default function Skills() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>
