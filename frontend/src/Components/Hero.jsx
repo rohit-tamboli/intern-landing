@@ -44,10 +44,10 @@ export default function Hero() {
             <p className="text-sm text-gray-500">START TODAY FOR JUST</p>
             <div className="flex items-center gap-3 sm:gap-4 mt-2">
               <span className="text-3xl sm:text-4xl font-bold text-red-500">
-                ₹299
+                ₹99
               </span>
               <span className="line-through text-gray-400 text-sm sm:text-base">
-                ₹2,999
+                ₹299
               </span>
             </div>
             <p className="text-green-600 text-xs sm:text-sm mt-2 font-medium">
@@ -84,7 +84,7 @@ export default function Hero() {
             {
               icon: <ShieldCheck size={18} className="text-red-500" />,
               title: "Simple & Transparent Pricing",
-              desc: "Only ₹299 booking fee. Fully refundable. No hidden charges.",
+              desc: "Only ₹99 booking fee. Fully refundable. No hidden charges.",
             },
             {
               icon: <GraduationCap size={18} className="text-red-500" />,
