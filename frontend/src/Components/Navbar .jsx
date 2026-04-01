@@ -7,17 +7,16 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const logos = [
-    { src: "/update.png", className: "w-16 md:w-28" },
-    { src: "/MCA.png", className: "w-5 md:w-8" },
-    { src: "/MSME.png", className: "w-14 md:w-24" },
-    { src: "/DPIIT.png", className: "w-14 md:w-24" },
-    { src: "/ISO.png", className: "w-10 md:w-14" },
+    { src: "/update.png", className: "w-12 sm:w-14 md:w-24" },
+    { src: "/MCA.png", className: "w-4 sm:w-5 md:w-7" },
+    { src: "/MSME.png", className: "w-10 sm:w-12 md:w-20" },
+    { src: "/DPIIT.png", className: "w-10 sm:w-12 md:w-20" },
+    { src: "/ISO.png", className: "w-8 sm:w-10 md:w-12" },
   ];
 
-  // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -29,67 +28,74 @@ export default function Navbar() {
       <motion.header
         initial={{ y: -80 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.5 }}
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-md shadow-md"
+            ? "bg-white/70 backdrop-blur-xl shadow-md border-b border-gray-200/50"
             : "bg-white border-b border-gray-200"
         }`}
       >
-        <div className="max-w-6xl mx-auto px-4">
-          <nav className="flex items-center justify-between h-16 md:h-20">
-            {/* LOGOS */}
-            <div className="flex gap-2 items-center flex-wrap">
+        {/* Gradient Line */}
+        <div className="h-[2px] w-full bg-gradient-to-r from-red-500 via-orange-400 to-red-500"></div>
+
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <nav className="flex items-center justify-between h-14 sm:h-16 md:h-20">
+
+            {/* LOGOS → SCROLLABLE (FIX 🔥) */}
+            <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto no-scrollbar">
               {logos.map((logo, i) => (
                 <motion.img
                   key={i}
                   src={logo.src}
                   alt="logo"
-                  whileHover={{ scale: 1.1 }}
-                  className={`${logo.className} object-contain`}
+                  whileHover={{ scale: 1.05 }}
+                  className={`${logo.className} object-contain shrink-0 opacity-90 hover:opacity-100 transition`}
                 />
               ))}
             </div>
 
-            {/* DESKTOP CTA */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              onClick={() => navigate("/signup")}
-              className="hidden md:inline-block bg-red-500 hover:bg-red-600 
-                         text-white text-sm md:text-lg 
-                         px-4 md:px-6 py-2 
-                         rounded-lg font-semibold shadow-md cursor-pointer"
-            >
-              APPLY NOW
-            </motion.button>
+            {/* DESKTOP BUTTON */}
+            <div className="hidden md:flex">
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.96 }}
+                onClick={() => navigate("/signup")}
+                className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-red-500 to-orange-500 
+                           text-white font-semibold shadow-lg hover:shadow-xl transition-all"
+              >
+                Apply Now
+              </motion.button>
+            </div>
           </nav>
         </div>
       </motion.header>
 
-      {/* 📱 MOBILE CTA */}
-      <motion.div
-  initial={false}
-  className="fixed bottom-0 left-0 w-full md:hidden 
-             bg-white border-t border-gray-200 shadow-lg 
-             px-3 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] 
-             z-50"
->
+      {/* 📱 PREMIUM FLOATING CTA */}
+      <div className="md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[92%] z-50">
+
+        {/* Glass Background */}
+        <div className="absolute inset-0 rounded-2xl 
+                        bg-white/20 backdrop-blur-xl 
+                        border border-white/30 
+                        shadow-[0_8px_30px_rgba(0,0,0,0.1)]"></div>
+
+        {/* Glow Layer */}
+        <div className="absolute inset-0 rounded-2xl 
+                        bg-gradient-to-r from-red-400/20 to-orange-400/20 blur-xl"></div>
+
         <motion.button
           whileTap={{ scale: 0.95 }}
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
+          animate={{ y: [0, -4, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
           onClick={() => navigate("/signup")}
-          className="w-full bg-red-500 hover:bg-red-600 
-           text-white py-3 rounded-xl 
-           font-semibold shadow-md 
-           mb-[env(safe-area-inset-bottom)]"
+          className="relative w-full py-3.5 rounded-2xl 
+                     bg-gradient-to-r from-red-500 to-orange-500 
+                     text-white font-semibold text-base 
+                     shadow-[0_12px_40px_rgba(255,0,0,0.35)]"
         >
-          APPLY NOW
+          Apply Now
         </motion.button>
-      </motion.div>
+      </div>
     </>
   );
 }
