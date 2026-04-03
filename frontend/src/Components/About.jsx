@@ -40,7 +40,7 @@ export default function About() {
           className="mt-5 sm:mt-6 text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-snug "
         >
           Welcome to{" "}
-          <span className="bg-white font-heading text-red-500 px-2 sm:px-3 py-1 rounded-lg">
+          <span className="bg-white font-heading text-red-500 px-0 sm:px-0 py-0 ">
             upDate
           </span>
         </motion.h2>

@@ -17,24 +17,24 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative font-mono bg-gradient-to-br from-white via-gray-50 to-white text-gray-700 pt-16 sm:pt-20 pb-8 overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-white via-gray-50 to-white text-gray-700 pt-16 sm:pt-20 pb-8 overflow-hidden">
 
       {/* Glow */}
-      <div className="absolute -top-24 left-5 sm:left-10 w-60 sm:w-80 h-60 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-60 sm:w-80 h-60 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute -top-24 left-10 w-80 h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-10 w-80 h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
 
-        {/* TOP SECTION */}
+        {/* TOP */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
 
           {/* BRAND */}
           <div>
-            <h2 className="text-2xl font-extrabold text-gray-900">
-              up<span className="text-red-500">Date</span>
+            <h2 className="font-display text-3xl font-bold text-white bg-red-500 px-1 py-0 inline-block tracking-tight shadow-sm">
+              upDate
             </h2>
 
-            <p className="mt-3 text-sm text-gray-600">
+            <p className="mt-4 text-sm font-premium text-gray-600">
               Building future-ready professionals with real corporate exposure.
             </p>
 
@@ -63,8 +63,11 @@ export default function Footer() {
 
           {/* LINKS */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-mono text-xs tracking-widest text-gray-500 mb-4">
+              QUICK LINKS
+            </h4>
+
+            <ul className="space-y-2 text-sm font-premium">
               {links.map((item, i) => (
                 <li key={i}>
                   <a href={item.path} className="hover:text-red-500 transition">
@@ -77,9 +80,11 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Contact</h4>
+            <h4 className="font-mono text-xs tracking-widest text-gray-500 mb-4">
+              CONTACT
+            </h4>
 
-            <div className="space-y-3 text-sm">
+            <div className="space-y-3 text-sm font-premium">
               <p className="flex items-center justify-center md:justify-start gap-2">
                 <Phone size={14} className="text-red-500" />
                 +91 8109718211
@@ -97,13 +102,13 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* NEWSLETTER 🔥 */}
+          {/* NEWSLETTER */}
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">
-              Stay Updated
+            <h4 className="font-mono text-xs tracking-widest text-gray-500 mb-4">
+              STAY UPDATED
             </h4>
 
-            <p className="text-sm text-gray-600 mb-3">
+            <p className="text-sm font-premium text-gray-600 mb-3">
               Get internship updates & offers.
             </p>
 
@@ -111,10 +116,10 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 text-sm font-premium focus:outline-none focus:ring-2 focus:ring-red-400"
               />
 
-              <button className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-500 text-white rounded-lg text-sm font-medium hover:scale-105 transition">
+              <button className="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-medium hover:scale-105 transition">
                 Subscribe
               </button>
             </div>
@@ -122,9 +127,10 @@ export default function Footer() {
 
         </div>
 
-        {/* DIVIDER */}
-        <div className="border-t border-gray-200 mt-10 pt-6 text-center text-xs sm:text-sm text-gray-500">
-          © {new Date().getFullYear()} <span className="font-medium text-gray-700">upDate</span>. All rights reserved.
+        {/* BOTTOM */}
+        <div className="border-t border-gray-200 mt-10 pt-6 text-center text-xs sm:text-sm text-gray-500 font-premium">
+          © {new Date().getFullYear()}{" "}
+          <span className="font-display text-gray-800">upDate</span>. All rights reserved.
         </div>
 
       </div>

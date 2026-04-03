@@ -36,7 +36,7 @@ export default function Navbar() {
         }`}
       >
         {/* Gradient Line */}
-        <div className="h-[2px] w-full bg-gradient-to-r from-red-500 via-orange-400 to-red-500"></div>
+        <div className="h-[2px] w-full bg-gradient-to-r from-red-500 via-red-400 to-red-500"></div>
 
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <nav className="flex items-center justify-between h-14 sm:h-16 md:h-20">
@@ -60,7 +60,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => navigate("/signup")}
-                className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-red-500 to-orange-500 
+                className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-red-500 to-red-500 
                            text-white font-semibold shadow-lg hover:shadow-xl transition-all"
               >
                 Apply Now
@@ -81,7 +81,7 @@ export default function Navbar() {
 
         {/* Glow Layer */}
         <div className="absolute inset-0 rounded-2xl 
-                        bg-gradient-to-r from-red-400/20 to-orange-400/20 blur-xl"></div>
+                        bg-gradient-to-r from-red-400/20 to-red-400/20 blur-xl"></div>
 
         <motion.button
           whileTap={{ scale: 0.95 }}
@@ -89,7 +89,7 @@ export default function Navbar() {
           transition={{ repeat: Infinity, duration: 2 }}
           onClick={() => navigate("/signup")}
           className="relative w-full py-3.5 rounded-2xl 
-                     bg-gradient-to-r from-red-500 to-orange-500 
+                     bg-gradient-to-r from-red-500 to-red-500 
                      text-white font-semibold text-base 
                      shadow-[0_12px_40px_rgba(255,0,0,0.35)]"
         >
