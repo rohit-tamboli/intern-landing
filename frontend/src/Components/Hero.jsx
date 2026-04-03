@@ -6,10 +6,10 @@ export default function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section className="relative  bg-white py-10 sm:py-14 overflow-hidden">
+    <section className="relative font-mono bg-white py-10 sm:py-14 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute -top-20 -left-20 w-60 sm:w-72 h-60 sm:h-72 bg-red-100 rounded-full blur-3xl opacity-40"></div>
-      <div className="absolute -bottom-20 -right-20 w-60 sm:w-72 h-60 sm:h-72 bg-orange-100 rounded-full blur-3xl opacity-40"></div>
+      <div className="absolute -bottom-20 -right-20 w-60 sm:w-72 h-60 sm:h-72 bg-red-100 rounded-full blur-3xl opacity-40"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
         
@@ -23,25 +23,25 @@ export default function Hero() {
           <span className="inline-block px-3 sm:px-4 py-1 text-xs bg-gray-100 border border-gray-200 rounded-full text-gray-600 shadow-sm">
             Registered Under DPIIT, Govt. of India
           </span>
-
+    
           {/* Heading */}
-          <h1 className="mt-6 text-3xl sm:text-4xl md:text-[53px] font-extrabold leading-tight tracking-tight">
+          <h1 className="font-mono mt-6 text-3xl sm:text-4xl md:text-[45px] font-extrabold leading-tight tracking-tight">
             <span className="text-gray-900">45 Day's</span>
             <br />
-            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent ">
+            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent ">
               Corporate Internship
             </span>
           </h1>
 
           {/* Description */}
-          <p className="mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg max-w-lg">
+          <p className="font-mono mt-4 sm:mt-6 text-gray-600 text-base sm:text-lg max-w-lg">
             Work on real industry projects with expert mentorship,
             certifications, and job-ready skills.
           </p>
 
           {/* Price Card */}
           <div className="mt-5 sm:mt-6 bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl transition">
-            <p className="text-sm text-gray-500">START TODAY FOR JUST</p>
+            <p className="font-mono text-sm text-gray-500">START TODAY FOR JUST</p>
             <div className="flex items-center gap-3 sm:gap-4 mt-2">
               <span className="text-3xl sm:text-4xl font-bold text-red-500">
                 ₹99
@@ -50,7 +50,7 @@ export default function Hero() {
                 ₹299
               </span>
             </div>
-            <p className="text-green-600 text-xs sm:text-sm mt-2 font-medium">
+            <p className="font-mono text-green-600 text-xs sm:text-sm mt-2 font-medium">
               100% Refundable • No Hidden Charges
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function Hero() {
               <h3 className="font-semibold flex items-center gap-2 text-sm sm:text-base">
                 {item.icon} {item.title}
               </h3>
-              <p className="text-xs sm:text-sm mt-2 text-gray-600">
+              <p className="font-mono text-xs sm:text-sm mt-2 text-gray-600">
                 {item.desc}
               </p>
             </div>
@@ -113,13 +113,13 @@ export default function Hero() {
           {/* Stats */}
           <div className="grid grid-cols-2 gap-3 sm:gap-4 pt-2">
             <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 text-center shadow-md hover:shadow-lg transition">
-              <p className="text-xl sm:text-2xl font-bold">1,000+</p>
-              <p className="text-xs sm:text-sm text-gray-500">Learners</p>
+              <p className="font-mono text-xl sm:text-2xl font-bold">1,000+</p>
+              <p className="font-mono text-xs sm:text-sm text-gray-500">Learners</p>
             </div>
 
             <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-5 text-center shadow-md hover:shadow-lg transition">
-              <p className="text-xl sm:text-2xl font-bold">1000+</p>
-              <p className="text-xs sm:text-sm text-gray-500">Students</p>
+              <p className="font-mono text-xl sm:text-2xl font-bold">1000+</p>
+              <p className="font-mono text-xs sm:text-sm text-gray-500">Students</p>
             </div>
           </div>
         </motion.div>

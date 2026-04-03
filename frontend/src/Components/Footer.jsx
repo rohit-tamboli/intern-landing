@@ -17,11 +17,11 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-white via-gray-50 to-white text-gray-700 pt-16 sm:pt-20 pb-8 overflow-hidden">
+    <footer className="relative font-mono bg-gradient-to-br from-white via-gray-50 to-white text-gray-700 pt-16 sm:pt-20 pb-8 overflow-hidden">
 
       {/* Glow */}
       <div className="absolute -top-24 left-5 sm:left-10 w-60 sm:w-80 h-60 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-60 sm:w-80 h-60 sm:h-80 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-5 sm:right-10 w-60 sm:w-80 h-60 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
 
@@ -114,7 +114,7 @@ export default function Footer() {
                 className="flex-1 px-4 py-2 rounded-lg border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-red-400"
               />
 
-              <button className="px-4 py-2 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg text-sm font-medium hover:scale-105 transition">
+              <button className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-500 text-white rounded-lg text-sm font-medium hover:scale-105 transition">
                 Subscribe
               </button>
             </div>

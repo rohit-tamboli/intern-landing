@@ -30,11 +30,11 @@ export default function Skills() {
   };
 
   return (
-    <section className="relative py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute -top-20 left-5 sm:left-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
 
@@ -47,7 +47,7 @@ export default function Skills() {
           className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900"
         >
           What You Will{" "}
-          <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
             Learn
           </span>
         </motion.h2>

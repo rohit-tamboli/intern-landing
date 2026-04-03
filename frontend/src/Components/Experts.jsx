@@ -56,18 +56,18 @@ export default function ExpertsSlider() {
   };
 
   return (
-    <section className="relative py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
 
       {/* Glow */}
       <div className="absolute -top-20 left-5 sm:left-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
 
         {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900">
           Meet Our{" "}
-          <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
             Experts
           </span>
         </h2>
@@ -114,7 +114,7 @@ export default function ExpertsSlider() {
               >
                 {/* Image */}
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-red-200 to-orange-200 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-red-200 to-red-200 rounded-full blur-xl opacity-0 group-hover:opacity-40 transition"></div>
 
                   <img
                     src={expert.img}

@@ -13,11 +13,11 @@ export default function CEOSection() {
   };
 
   return (
-    <section className="relative py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
 
       {/* Glow Background */}
       <div className="absolute -top-20 left-5 sm:left-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <motion.div
         initial="initial"
@@ -34,7 +34,7 @@ export default function CEOSection() {
           className="flex justify-center relative order-1 md:order-none"
         >
           {/* Glow Ring */}
-          <div className="absolute w-64 sm:w-80 h-64 sm:h-80 bg-gradient-to-r from-red-200 to-orange-200 rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute w-64 sm:w-80 h-64 sm:h-80 bg-gradient-to-r from-red-200 to-red-200 rounded-full blur-3xl opacity-40"></div>
 
           <img
             src="/ceo.png"
@@ -57,7 +57,7 @@ export default function CEOSection() {
 
           <h2 className="mt-4 sm:mt-5 text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-snug">
             Meet Our{" "}
-            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
               CEO
             </span>
           </h2>
@@ -85,7 +85,7 @@ export default function CEOSection() {
           </p>
 
           {/* Divider */}
-          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-red-500 to-orange-500 mt-5 sm:mt-6 rounded-full mx-auto md:mx-0"></div>
+          <div className="w-16 sm:w-20 h-1 bg-gradient-to-r from-red-500 to-red-500 mt-5 sm:mt-6 rounded-full mx-auto md:mx-0"></div>
 
           <div className="mt-4 sm:mt-5">
             <p className="text-gray-900 font-semibold">Kirtan Sahu</p>

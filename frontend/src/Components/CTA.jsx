@@ -10,7 +10,7 @@ export default function CTA() {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-red-600 via-red-500 to-orange-500 text-white overflow-hidden">
+    <section className="relative font-mono py-16 sm:py-20 md:py-28 bg-gradient-to-br from-red-600 via-red-500 to-orange-500 text-white overflow-hidden">
 
       {/* Glow Layers */}
       <div className="pointer-events-none absolute -top-20 -left-16 sm:-top-24 sm:-left-24 w-56 sm:w-80 h-56 sm:h-80 bg-white/30 rounded-full blur-3xl opacity-30"></div>

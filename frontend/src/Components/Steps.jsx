@@ -29,11 +29,11 @@ export default function Steps() {
   };
 
   return (
-    <section className="relative py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden" id="steps">
+    <section className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden" id="steps">
 
       {/* Glow */}
       <div className="absolute -top-20 left-5 sm:left-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-72 h-56 sm:h-72 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
 
@@ -46,7 +46,7 @@ export default function Steps() {
           className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900"
         >
           How To{" "}
-          <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
             Apply
           </span>
         </motion.h2>
@@ -70,7 +70,7 @@ export default function Steps() {
             whileInView={{ scaleX: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="hidden md:block absolute top-20 left-0 right-0 h-[2px] bg-gradient-to-r from-red-200 via-gray-200 to-orange-200 origin-left"
+            className="hidden md:block absolute top-20 left-0 right-0 h-[2px] bg-gradient-to-r from-red-200 via-gray-200 to-red-200 origin-left"
           />
 
           {/* Steps */}
@@ -94,7 +94,7 @@ export default function Steps() {
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
 
                 {/* Icon Circle */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-red-500 to-orange-500 text-white flex items-center justify-center shadow-lg">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-red-500 to-red-500 text-white flex items-center justify-center shadow-lg">
                   {step.icon}
                 </div>
 
@@ -123,7 +123,7 @@ export default function Steps() {
         >
           <button
             onClick={() => navigate("/signup")}
-            className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold shadow-[0_10px_30px_rgba(255,0,0,0.3)] hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,0,0,0.4)] transition-all"
+            className="w-full sm:w-auto px-6 sm:px-8 py-3 rounded-xl bg-gradient-to-r from-red-500 to-red-500 text-white font-semibold shadow-[0_10px_30px_rgba(255,0,0,0.3)] hover:scale-105 hover:shadow-[0_15px_40px_rgba(255,0,0,0.4)] transition-all"
           >
             Apply Now
           </button>

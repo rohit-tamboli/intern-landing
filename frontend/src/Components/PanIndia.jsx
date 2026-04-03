@@ -8,11 +8,11 @@ export default function PanIndia() {
   };
 
   return (
-    <section className="relative py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
 
       {/* Glow */}
       <div className="absolute -top-20 left-5 sm:left-10 w-56 sm:w-80 h-56 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-80 h-56 sm:h-80 bg-orange-200 rounded-full blur-3xl opacity-30"></div>
+      <div className="absolute bottom-0 right-5 sm:right-10 w-56 sm:w-80 h-56 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
 
       <motion.div
         initial="initial"
@@ -29,7 +29,7 @@ export default function PanIndia() {
           className="flex justify-center relative order-1 md:order-2"
         >
           {/* Glow */}
-          <div className="absolute w-56 sm:w-80 h-56 sm:h-80 bg-gradient-to-r from-red-200 to-orange-200 rounded-full blur-3xl opacity-40"></div>
+          <div className="absolute w-56 sm:w-80 h-56 sm:h-80 bg-gradient-to-r from-red-200 to-red-200 rounded-full blur-3xl opacity-40"></div>
 
           <img
             src="/india-map.png"
@@ -56,7 +56,7 @@ export default function PanIndia() {
             className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight"
           >
             Our{" "}
-            <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
               PAN-India Presence
             </span>
           </motion.h2>
@@ -95,7 +95,7 @@ export default function PanIndia() {
             </div>
 
             <div className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl px-4 sm:px-6 py-3 sm:py-4 shadow-md hover:shadow-xl transition">
-              <h3 className="text-xl sm:text-3xl font-bold text-orange-500">50+</h3>
+              <h3 className="text-xl sm:text-3xl font-bold text-red-500">50+</h3>
               <p className="text-xs sm:text-sm text-gray-500">Cities Network</p>
             </div>
           </motion.div>
