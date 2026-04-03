@@ -7,11 +7,11 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   const logos = [
-    { src: "/update.png", className: "w-12 sm:w-14 md:w-24" },
-    { src: "/MCA.png", className: "w-4 sm:w-5 md:w-7" },
-    { src: "/MSME.png", className: "w-10 sm:w-12 md:w-20" },
-    { src: "/DPIIT.png", className: "w-10 sm:w-12 md:w-20" },
-    { src: "/ISO.png", className: "w-8 sm:w-10 md:w-12" },
+    { src: "/update.png", className: "w-14 sm:w-14 md:w-24" },
+    { src: "/MCA.png", className: "w-6 sm:w-5 md:w-7" },
+    { src: "/MSME.png", className: "w-12 sm:w-12 md:w-20" },
+    { src: "/DPIIT.png", className: "w-12 sm:w-12 md:w-20" },
+    { src: "/ISO.png", className: "w-10 sm:w-10 md:w-12" },
   ];
 
   useEffect(() => {
