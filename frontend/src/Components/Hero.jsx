@@ -24,15 +24,33 @@ export default function Hero() {
           </span>
 
           {/* Heading */}
-          <h1 className="font-mono mt-6 text-3xl sm:text-4xl md:text-[45px] font-extrabold leading-tight tracking-tight">
-            <span className="text-gray-900">Summer Internship</span>
-            <br />
-            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">
-              Training Program
-            </span>
-          </h1>
+      
 
-     
+          <div className="flex mt-6 bg-white">
+            <div className="relative inline-block">
+              <h1 className="md:text-5xl text-3xl sm:text-4xl font-bold text-red-500 pb-2 md:pb-3">
+                Summer Internship
+              </h1>
+
+              {/* WAVE UNDERLINE */}
+              <svg
+                className="absolute left-0 -bottom-2 w-[255px] md:w-[410px] h-[20px]"
+                viewBox="0 0 300 20"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M0 10 Q40 0 80 10 T190 10 T240 10 T300 10"
+                  fill="none"
+                  stroke="red"
+                  strokeWidth="5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <h1 className="md:text-5xl text-3xl sm:text-4xl font-bold text-red-500 pt-1 md:pt-2">
+            Training Program
+          </h1>
 
           {/* Description */}
           <p className="font-alt mt-4 sm:mt-6 text-gray-900 text-base sm:text-lg max-w-lg">
