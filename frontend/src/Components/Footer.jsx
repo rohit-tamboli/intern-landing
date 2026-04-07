@@ -30,11 +30,11 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <h2 className="font-display text-3xl font-bold text-white bg-red-500 px-1 py-0 inline-block tracking-tight shadow-sm">
+            <h2 className="font-alt text-3xl font-bold text-white bg-red-500 px-1 py-0 inline-block tracking-tight shadow-sm">
               upDate
             </h2>
 
-            <p className="mt-4 text-sm font-premium text-gray-600">
+            <p className="mt-4 text-sm font-alt text-gray-600">
               Building future-ready professionals with real corporate exposure.
             </p>
 
@@ -62,12 +62,12 @@ export default function Footer() {
           </div>
 
           {/* LINKS */}
-          <div>
-            <h4 className="font-mono text-xs tracking-widest text-gray-500 mb-4">
+          <div className="font-alt">
+            <h4 className=" text-xs tracking-widest text-gray-500 mb-4">
               QUICK LINKS
             </h4>
 
-            <ul className="space-y-2 text-sm font-premium">
+            <ul className="space-y-2 text-sm ">
               {links.map((item, i) => (
                 <li key={i}>
                   <a href={item.path} className="hover:text-red-500 transition">
@@ -80,11 +80,11 @@ export default function Footer() {
 
           {/* CONTACT */}
           <div>
-            <h4 className="font-mono text-xs tracking-widest text-gray-500 mb-4">
+            <h4 className="font-alt text-xs tracking-widest text-gray-500 mb-4">
               CONTACT
             </h4>
 
-            <div className="space-y-3 text-sm font-premium">
+            <div className="space-y-3 text-sm font-alt">
               <p className="flex items-center justify-center md:justify-start gap-2">
                 <Phone size={14} className="text-red-500" />
                 +91 8109718211
@@ -104,11 +104,11 @@ export default function Footer() {
 
           {/* NEWSLETTER */}
           <div>
-            <h4 className="font-mono text-xs tracking-widest text-gray-500 mb-4">
+            <h4 className="font-alt text-xs tracking-widest text-gray-500 mb-4">
               STAY UPDATED
             </h4>
 
-            <p className="text-sm font-premium text-gray-600 mb-3">
+            <p className="text-sm font-alt text-gray-600 mb-3">
               Get internship updates & offers.
             </p>
 
@@ -116,7 +116,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Enter email"
-                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 text-sm font-premium focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 text-sm font-alt focus:outline-none focus:ring-2 focus:ring-red-400"
               />
 
               <button className="px-4 py-2 bg-red-500 text-white rounded-lg text-sm font-medium hover:scale-105 transition">
@@ -128,9 +128,9 @@ export default function Footer() {
         </div>
 
         {/* BOTTOM */}
-        <div className="border-t border-gray-200 mt-10 pt-6 text-center text-xs sm:text-sm text-gray-500 font-premium">
+        <div className="border-t border-gray-200 mt-10 pt-6 text-center text-xs sm:text-sm text-gray-500 font-alt">
           © {new Date().getFullYear()}{" "}
-          <span className="font-display text-gray-800">upDate</span>. All rights reserved.
+          <span className="font-alt text-gray-800">upDate</span>. All rights reserved.
         </div>
 
       </div>

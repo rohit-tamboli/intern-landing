@@ -10,7 +10,7 @@ export default function CTA() {
   };
 
   return (
-    <section className="relative font-mono py-16 sm:py-20 md:py-28 bg-gradient-to-br from-red-600 via-red-500 to-orange-500 text-white overflow-hidden">
+    <section className="relative font-alt py-16 sm:py-20 md:py-28 bg-gradient-to-br from-red-600 via-red-500 to-orange-500 text-white overflow-hidden">
 
       {/* Glow Layers */}
       <div className="pointer-events-none absolute -top-20 -left-16 sm:-top-24 sm:-left-24 w-56 sm:w-80 h-56 sm:h-80 bg-white/30 rounded-full blur-3xl opacity-30"></div>
@@ -45,7 +45,7 @@ export default function CTA() {
         <motion.h2
           variants={fadeUp}
           transition={{ duration: 0.6 }}
-          className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight tracking-tight"
+          className="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight tracking-tight font-mono"
         >
           Start Your{" "}
           <span className="bg-white text-red-600 px-2 sm:px-3 py-1 rounded-lg">

@@ -8,7 +8,7 @@ export default function PanIndia() {
   };
 
   return (
-    <section className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
+    <section className="relative font-alt py-14 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white overflow-hidden">
 
       {/* Glow */}
       <div className="absolute -top-20 left-5 sm:left-10 w-56 sm:w-80 h-56 sm:h-80 bg-red-200 rounded-full blur-3xl opacity-30"></div>
@@ -53,7 +53,7 @@ export default function PanIndia() {
           <motion.h2
             variants={fadeUp}
             transition={{ duration: 0.5 }}
-            className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight"
+            className="text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight font-mono"
           >
             Our{" "}
             <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent">

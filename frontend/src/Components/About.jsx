@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative font-mono py-14 sm:py-20 md:py-24 bg-gradient-to-br from-red-600 via-red-500 to-red-600 overflow-hidden text-white"
+      className="relative py-14 sm:py-20 md:py-24 bg-gradient-to-br from-red-600 via-red-500 to-red-600 overflow-hidden text-white"
     >
 
       {/* Premium Glow */}
@@ -28,7 +28,7 @@ export default function About() {
         {/* Badge */}
         <motion.span
           variants={fadeUp}
-          className="inline-block px-3 sm:px-4 py-1 text-xs sm:text-sm bg-white/10 border border-white/20 rounded-full backdrop-blur-md"
+          className="inline-block px-3 sm:px-4 py-1 text-xs sm:text-sm bg-white/10 border border-white/20 rounded-full backdrop-blur-md font-alt"
         >
           About Our Platform
         </motion.span>
@@ -37,7 +37,7 @@ export default function About() {
         <motion.h2
           variants={fadeUp}
           transition={{ duration: 0.5 }}
-          className="mt-5 sm:mt-6 text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-snug "
+          className="mt-5 sm:mt-6 text-2xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-snug font-mono "
         >
           Welcome to{" "}
           <span className="bg-white font-heading text-red-500 px-0 sm:px-0 py-0 ">
@@ -49,7 +49,7 @@ export default function About() {
         <motion.p
           variants={fadeUp}
           transition={{ duration: 0.5 }}
-          className="mt-4 sm:mt-5 text-white/90 text-sm sm:text-lg md:text-xl font-medium font-mono"
+          className="mt-4 sm:mt-5 text-white/90 text-sm sm:text-lg md:text-xl font-medium font-alt "
         >
           Transforming learners into corporate-ready professionals
         </motion.p>
@@ -60,13 +60,13 @@ export default function About() {
           transition={{ duration: 0.5 }}
           className="mt-8 sm:mt-10 bg-white/10 border border-white/20 rounded-2xl p-5 sm:p-8 backdrop-blur-md shadow-xl"
         >
-          <p className=" font-mono text-white/90 text-sm sm:text-base md:text-lg leading-relaxed">
+          <p className=" font-alt text-white/90 text-sm sm:text-base md:text-lg leading-relaxed">
             upDate is an industry-focused EdTech initiative led by IIT Alumni,
             committed to bridging the gap between academic learning and real-world
             industry demands through practical, job-oriented certification programs.
           </p>
 
-          <p className=" font-mono mt-4 sm:mt-6 text-base sm:text-lg font-semibold">
+          <p className=" font-alt mt-4 sm:mt-6 text-base sm:text-lg font-semibold">
             We don’t just teach —{" "}
             <span className="bg-white text-red-500 px-2 sm:px-3 py-1 rounded-lg">
               we prepare you for the corporate world.
