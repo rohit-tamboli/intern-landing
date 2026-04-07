@@ -32,6 +32,8 @@ export default function Hero() {
             </span>
           </h1>
 
+     
+
           {/* Description */}
           <p className="font-alt mt-4 sm:mt-6 text-gray-900 text-base sm:text-lg max-w-lg">
             Work on real industry projects with expert mentorship,
