@@ -28,13 +28,13 @@ export default function Hero() {
 
           <div className="flex mt-6 bg-white">
             <div className="relative inline-block">
-              <h1 className="md:text-5xl text-4xl sm:text-4xl font-bold text-red-500 pb-2 md:pb-3">
+              <h1 className="md:text-5xl text-[40px] sm:text-4xl font-bold text-red-500 pb-2 md:pb-3">
                 Summer Internship
               </h1>
 
               {/* WAVE UNDERLINE */}
               <svg
-                className="absolute left-0 -bottom-2 w-[310px] md:w-[410px] h-[20px]"
+                className="absolute left-0 -bottom-2 w-[340px] md:w-[410px] h-[20px]"
                 viewBox="0 0 300 20"
                 preserveAspectRatio="none"
               >
@@ -48,7 +48,7 @@ export default function Hero() {
               </svg>
             </div>
           </div>
-          <h1 className="md:text-5xl text-4xl sm:text-4xl font-bold text-red-500 pt-1 md:pt-2">
+          <h1 className="md:text-5xl text-[40px] sm:text-4xl font-bold text-red-500 pt-1 md:pt-2">
             Training Program
           </h1>
 
