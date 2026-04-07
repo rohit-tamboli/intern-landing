@@ -6,7 +6,7 @@ export default function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section className="relative font-mono bg-white py-8 sm:py-14 overflow-hidden">
+    <section className="relative font-alt bg-white py-8 sm:py-14 overflow-hidden">
       {/* Background Glow */}
       <div className="absolute -top-20 -left-20 w-60 sm:w-72 h-60 sm:h-72 bg-red-100 rounded-full blur-3xl opacity-40"></div>
       <div className="absolute -bottom-20 -right-20 w-60 sm:w-72 h-60 sm:h-72 bg-red-100 rounded-full blur-3xl opacity-40"></div>
@@ -79,7 +79,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="space-y-4 sm:space-y-5 "
+          className="space-y-4 sm:space-y-5 font-alt"
         >
           {[
             {
@@ -105,7 +105,7 @@ export default function Hero() {
               <h3 className="font-semibold flex items-center gap-2 text-sm sm:text-base">
                 {item.icon} {item.title}
               </h3>
-              <p className="font-mono text-xs sm:text-sm mt-2 text-gray-600">
+              <p className="font-alt text-xs sm:text-sm mt-2 text-gray-600">
                 {item.desc}
               </p>
             </div>
