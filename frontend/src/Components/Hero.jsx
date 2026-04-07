@@ -27,7 +27,7 @@ export default function Hero() {
           <h1 className="font-mono mt-6 text-4xl sm:text-4xl md:text-[45px] font-extrabold leading-tight tracking-tight">
             <span className="text-gray-900">45 Day's</span>
             <br />
-            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent ">
+            <span className="bg-gradient-to-r from-red-500 to-red-500 bg-clip-text text-transparent text-[30px]">
               Corporate Internship
             </span>
           </h1>
